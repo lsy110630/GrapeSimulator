@@ -74,7 +74,7 @@ public class Artifact : MonoBehaviour
         }
 
         two = GameObject.Find("IDK1");
-        scissorses = GameObject.Find("scissorses");
+        scissorses = GameObject.Find("scissors");
         scissorses.gameObject.SetActive(false);
 
         if (scissors == true)

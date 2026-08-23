@@ -1,13 +1,17 @@
 using UnityEngine;
 
-public class EXIncreases : MonoBehaviour
+public class EXIncrease : MonoBehaviour
 {
     GameObject uDirector;
+    GameObject tooltip;
     bool maxIncrease = false;   // 업그레이드 가능 판단
 
     void Start()
     {
         this.uDirector = GameObject.Find("UpgradeDirector");
+        // 설명 찾고 숨기기
+        this.tooltip = GameObject.Find("EXIncreaseT");
+        this.tooltip.SetActive(false);
     }
 
     void Update()

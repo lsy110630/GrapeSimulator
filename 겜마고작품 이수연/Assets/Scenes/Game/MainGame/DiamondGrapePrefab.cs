@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GlovePodo : MonoBehaviour
+public class DiamondGrapePrefab : MonoBehaviour
 {
     GameObject director;
     float span = 3.0f;       // 사라질떄까지 시간
@@ -27,7 +27,7 @@ public class GlovePodo : MonoBehaviour
             int dice = Random.Range(1, 1001);
             if (dice <= this.director.GetComponent<MainGameDirector>().bP)
             {
-                this.director.GetComponent<MainGameDirector>().podo += this.director.GetComponent<MainGameDirector>().value;
+                this.director.GetComponent<MainGameDirector>().podo += 4 + this.director.GetComponent<MainGameDirector>().value;
                 this.director.GetComponent<MainGameDirector>().EX += 1 + this.director.GetComponent<MainGameDirector>().addEX;
 
                 int dice2 = Random.Range(1, 1001);
@@ -36,8 +36,6 @@ public class GlovePodo : MonoBehaviour
                     // 포도생성 함수실행
                     this.director.GetComponent<GrapeGenerator>().podoSpawn();
                 }
-
-                this.director.GetComponent<MainGameDirector>().glovepodo = 1;
 
                 Destroy(this.gameObject);
             }
@@ -52,7 +50,7 @@ public class GlovePodo : MonoBehaviour
             if (this.delta > span)
             {
                 // podo랑 경험치에 +1
-                this.director.GetComponent<MainGameDirector>().podo += this.director.GetComponent<MainGameDirector>().value;
+                this.director.GetComponent<MainGameDirector>().podo += 4 + this.director.GetComponent<MainGameDirector>().value;
                 this.director.GetComponent<MainGameDirector>().EX += 1 + this.director.GetComponent<MainGameDirector>().addEX;
 
                 // 포도가 사라질떄마다 일정 확률로 포도가 생성되게 처음엔 아예 확률이 없지만 업그레이드를 하면 확룰이 조금씩생기는 그런
@@ -63,9 +61,8 @@ public class GlovePodo : MonoBehaviour
                     this.director.GetComponent<GrapeGenerator>().podoSpawn();
                 }
 
-                this.director.GetComponent<MainGameDirector>().glovepodo = 1;    // 아티팩트를 먹은걸 표시
-
-                Destroy(this.gameObject);             // 없어진다
+                // 나 터짐
+                Destroy(this.gameObject);
             }
         }
     }

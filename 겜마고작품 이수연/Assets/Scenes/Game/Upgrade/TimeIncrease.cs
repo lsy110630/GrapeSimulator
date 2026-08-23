@@ -3,11 +3,21 @@ using UnityEngine;
 public class TimeIncrease : MonoBehaviour
 {
     GameObject uDirector;
+    GameObject tooltip;
     bool maxIncrease = false;   // 업그레이드 가능 판단
+
+    GameObject btn1;
 
     void Start()
     {
         this.uDirector = GameObject.Find("UpgradeDirector");
+        // 설명 찾고 숨기기
+        this.tooltip = GameObject.Find("TimeIncreaseT");
+        this.tooltip.SetActive(false);
+
+        // 다음 업그레이드 숨기기
+        this.btn1 = GameObject.Find("ValueIncrease");
+        this.btn1.SetActive(false);
     }
 
     void Update()
@@ -16,6 +26,12 @@ public class TimeIncrease : MonoBehaviour
         if (this.uDirector.GetComponent<UpgradeDirector>().tUN >= 5)
         {
             this.maxIncrease = true;
+        }
+
+        // 업그레이드가 되있으면 버튼을 보이게한다
+        if (this.uDirector.GetComponent<UpgradeDirector>().tUN >= 1)
+        {
+            this.btn1.SetActive(true);
         }
     }
 
@@ -38,5 +54,15 @@ public class TimeIncrease : MonoBehaviour
                 PlayerPrefs.Save();
             }
         }
+    }
+
+    public void ShowTooltip()
+    {
+        this.tooltip.SetActive(true);
+    }
+
+    public void HideTooltip()
+    {
+        this.tooltip.SetActive(false);
     }
 }

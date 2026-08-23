@@ -11,6 +11,8 @@ public class UpgradeDirector : MonoBehaviour
     GameObject bpnUN;             // 부숴짐 업그레이드 넘버 텍스트
     GameObject exnUN;             // 추가 경험치 업그레이드 넘버 텍스트
     GameObject vnUN;              // 포도 가치 업그레이드 넘버 텍스트
+    GameObject gpnUN;             // 골드 포도 확률 업그레이드 넘버 텍스트
+    GameObject dpnUN;             // 다이아 포도 확률 업그레이드 넘버 텍스트
 
     // 필요 데이터
     public int podo = 0;
@@ -28,6 +30,11 @@ public class UpgradeDirector : MonoBehaviour
     public int EXUN = 0;              // 추가 경험치 업그레이드 넘버
     public int value = 1;             // 포도 가치
     public int vUN = 0;               // 포도 가치 업그레이드 넘버
+
+    public int goldP = 10;            // 골드 포도 확률
+    public int gpUN = 0;              // 골드 포도 확률 업그레이드 넘버
+    public int diamondP = 5;          // 다이아 포도 확률
+    public int dpUN = 0;              // 다이아 포도 확률 업그레이드 넘버
 
     public int artiP = 1;             // 아티팩트 스폰 확률
 
@@ -52,6 +59,8 @@ public class UpgradeDirector : MonoBehaviour
         this.bpnUN = GameObject.Find("bPUN");
         this.exnUN = GameObject.Find("exnUN");
         this.vnUN = GameObject.Find("VUN");
+        this.gpnUN = GameObject.Find("GPUN");
+        this.dpnUN = GameObject.Find("DPUN");
 
         // 필수 데이터 불러오기
         this.podo = PlayerPrefs.GetInt("podo", 0);
@@ -69,6 +78,12 @@ public class UpgradeDirector : MonoBehaviour
         this.EXUN = PlayerPrefs.GetInt("EXUN", 0);
         this.value = PlayerPrefs.GetInt("value", 1);
         this.vUN = PlayerPrefs.GetInt("vUN", 0);
+
+        this.goldP = PlayerPrefs.GetInt("goldP", 10);
+        this.gpUN = PlayerPrefs.GetInt("gpUN", 0);
+        this.diamondP = PlayerPrefs.GetInt("diamondP", 5);
+        this.dpUN = PlayerPrefs.GetInt("dpUN", 0);
+
 
         this.artiP = PlayerPrefs.GetInt("artiP", 1);
 
@@ -94,5 +109,7 @@ public class UpgradeDirector : MonoBehaviour
         this.bpnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().bPUN.ToString() + " /" + " 5";
         this.exnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().EXUN.ToString() + " /" + " 5";
         this.vnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().vUN.ToString() + " /" + " 5";
+        this.gpnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().gpUN.ToString() + " /" + " 5";
+        this.dpnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().dpUN.ToString() + " /" + " 5";
     }
 }

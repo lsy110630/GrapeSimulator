@@ -24,13 +24,13 @@ public class GrapePrefab : MonoBehaviour
         if ((one == true) && (collision.gameObject.tag == "Circle"))
         {
             one = false;
-            int dice = Random.Range(1, 100001);
+            int dice = Random.Range(1, 1001);
             if (dice <= this.director.GetComponent<MainGameDirector>().bP)
             {
                 this.director.GetComponent<MainGameDirector>().podo += this.director.GetComponent<MainGameDirector>().value;
                 this.director.GetComponent<MainGameDirector>().EX += 1 + this.director.GetComponent<MainGameDirector>().addEX;
 
-                int dice2 = Random.Range(1, 100001);
+                int dice2 = Random.Range(1, 1001);
                 if (dice2 <= this.director.GetComponent<MainGameDirector>().pSP)
                 {
                     // 포도생성 함수실행
@@ -54,7 +54,7 @@ public class GrapePrefab : MonoBehaviour
                 this.director.GetComponent<MainGameDirector>().EX += 1 + this.director.GetComponent<MainGameDirector>().addEX;
 
                 // 포도가 사라질떄마다 일정 확률로 포도가 생성되게 처음엔 아예 확률이 없지만 업그레이드를 하면 확룰이 조금씩생기는 그런
-                int dice = Random.Range(1, 100001);  //   원래 100에 1이 1% 1000 1 0.1% 10000 1 0.01% 100000 1 0.001%
+                int dice = Random.Range(1, 1001);  //   원래 100에 1이 1% 1000 1 0.1% 10000 1 0.01% 100000 1 0.001%
                 if (dice <= this.director.GetComponent<MainGameDirector>().pSP)
                 {
                     // 포도생성 함수실행

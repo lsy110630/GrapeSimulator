@@ -3,11 +3,23 @@ using UnityEngine;
 public class PodoSpawn : MonoBehaviour
 {
     GameObject uDirector;
+    GameObject tooltip;
     bool maxIncrease = false;   // 업그레이드 가능 판단
+
+    GameObject btn1;
+    GameObject btn2;
 
     void Start()
     {
         this.uDirector = GameObject.Find("UpgradeDirector");
+        // 설명 찾고 숨기기
+        this.tooltip = GameObject.Find("PodoSpawnT");
+        this.tooltip.SetActive(false);
+
+        this.btn1 = GameObject.Find("GPIncrease");
+        this.btn1.SetActive(false);
+        this.btn2 = GameObject.Find("DPIncrease");
+        this.btn2.SetActive(false);
     }
 
     void Update()
@@ -16,6 +28,13 @@ public class PodoSpawn : MonoBehaviour
         if (this.uDirector.GetComponent<UpgradeDirector>().pSPUN >= 5)
         {
             this.maxIncrease = true;
+        }
+
+        // 업그레이드가 되있으면 버튼을 보이게한다
+        if (this.uDirector.GetComponent<UpgradeDirector>().pSPUN >= 1)
+        {
+            this.btn1.SetActive(true);
+            this.btn2.SetActive(true);
         }
     }
 
@@ -38,5 +57,15 @@ public class PodoSpawn : MonoBehaviour
                 PlayerPrefs.Save();
             }
         }
+    }
+
+    public void ShowTooltip()
+    {
+        this.tooltip.SetActive(true);
+    }
+
+    public void HideTooltip()
+    {
+        this.tooltip.SetActive(false);
     }
 }

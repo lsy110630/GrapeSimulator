@@ -14,27 +14,35 @@ public class MainPlay : MonoBehaviour
     public void MPlay()
     {
         // 필수 데이터 저장
-        PlayerPrefs.SetInt("podo", this.uDirector.GetComponent<UpgradeDirector>().podo);
-        PlayerPrefs.SetInt("juice", this.uDirector.GetComponent<UpgradeDirector>().juice);
-        PlayerPrefs.SetInt("token", this.uDirector.GetComponent<UpgradeDirector>().token);
-        PlayerPrefs.SetInt("podoCount", this.uDirector.GetComponent<UpgradeDirector>().podoCount);
-        PlayerPrefs.SetInt("time", this.uDirector.GetComponent<UpgradeDirector>().time);
-        PlayerPrefs.SetInt("pSP", this.uDirector.GetComponent<UpgradeDirector>().pSP);
-        PlayerPrefs.SetInt("bP", this.uDirector.GetComponent<UpgradeDirector>().bP);
+        PlayerPrefs.SetInt("podo", this.uDirector.GetComponent<UpgradeDirector>().podo);                  
+        PlayerPrefs.SetInt("juice", this.uDirector.GetComponent<UpgradeDirector>().juice);                   // 주스 개수
+        PlayerPrefs.SetInt("token", this.uDirector.GetComponent<UpgradeDirector>().token);                   // 토큰 개수
+        PlayerPrefs.SetInt("podoCount", this.uDirector.GetComponent<UpgradeDirector>().podoCount);           // 생성 포도 개수
+        PlayerPrefs.SetInt("time", this.uDirector.GetComponent<UpgradeDirector>().time);                     // 겜 시간
+        PlayerPrefs.SetInt("value", this.uDirector.GetComponent<UpgradeDirector>().value);                   // 포도 가치
+        PlayerPrefs.SetInt("goldP", this.uDirector.GetComponent<UpgradeDirector>().goldP);                   // 골드 포도 생성될 확률
+        PlayerPrefs.SetInt("diamondP", this.uDirector.GetComponent<UpgradeDirector>().diamondP);             // 다이아 포도 생성될 확률
+        PlayerPrefs.SetInt("pSP", this.uDirector.GetComponent<UpgradeDirector>().pSP);                       // 포도를 먹었을때 포도가 생성될 확률
+        PlayerPrefs.SetInt("bP", this.uDirector.GetComponent<UpgradeDirector>().bP);                         // 포도가 바로 먹어질 확률
 
-        PlayerPrefs.SetInt("addEX", this.uDirector.GetComponent<UpgradeDirector>().addEX);
+        PlayerPrefs.SetInt("addEX", this.uDirector.GetComponent<UpgradeDirector>().addEX);                   // 추가로 얻을 경첨치
 
+        PlayerPrefs.SetFloat("speed", this.uDirector.GetComponent<UpgradeDirector>().speed);                 // 캐릭터 속도
+
+        PlayerPrefs.SetInt("artiP", this.uDirector.GetComponent<UpgradeDirector>().artiP);                   // 아티팩트 생성 확률
+
+        // 각 업그레이드 상황
         PlayerPrefs.SetInt("gUN", this.uDirector.GetComponent<UpgradeDirector>().gUN);
         PlayerPrefs.SetInt("tUN", this.uDirector.GetComponent<UpgradeDirector>().tUN);
+        PlayerPrefs.SetInt("vUN", this.uDirector.GetComponent<UpgradeDirector>().vUN);
+        PlayerPrefs.SetInt("gpUN", this.uDirector.GetComponent<UpgradeDirector>().gpUN);
+        PlayerPrefs.SetInt("dpUN", this.uDirector.GetComponent<UpgradeDirector>().dpUN);
         PlayerPrefs.SetInt("pSPUN", this.uDirector.GetComponent<UpgradeDirector>().pSPUN);
         PlayerPrefs.SetInt("bPUN", this.uDirector.GetComponent<UpgradeDirector>().bPUN);
-
+        
         PlayerPrefs.SetInt("EXUN", this.uDirector.GetComponent<UpgradeDirector>().EXUN);
 
-        PlayerPrefs.SetFloat("speed", this.uDirector.GetComponent<UpgradeDirector>().speed);
-
-        PlayerPrefs.SetInt("artiP", this.uDirector.GetComponent<UpgradeDirector>().artiP);
-
+        // 아티팩트
         PlayerPrefs.SetInt("shosepodo", this.uDirector.GetComponent<UpgradeDirector>().shosepodo);
         PlayerPrefs.SetInt("scissorspodo", this.uDirector.GetComponent<UpgradeDirector>().scissorspodo);
         PlayerPrefs.SetInt("glovepodo", this.uDirector.GetComponent<UpgradeDirector>().glovepodo);
@@ -54,6 +62,13 @@ public class MainPlay : MonoBehaviour
         PlayerPrefs.SetInt("gUN", 0);
         PlayerPrefs.SetInt("time", 15);
         PlayerPrefs.SetInt("tUN", 0);
+        PlayerPrefs.SetInt("value", 1);
+        PlayerPrefs.SetInt("vUN", 0);
+        PlayerPrefs.SetInt("goldP", 10);
+        PlayerPrefs.SetInt("gpUN", 0);
+        PlayerPrefs.SetInt("diamondP", 5);
+        PlayerPrefs.SetInt("dpUN", 0);
+
         PlayerPrefs.SetInt("pSP", 0);
         PlayerPrefs.SetInt("pSPUN", 0);
         PlayerPrefs.SetInt("bP", 0);

@@ -15,6 +15,8 @@ public class MainGameDirector : MonoBehaviour
     public int podo = 0;
     public int podoCount = 30;          // Æ÷µµ °³¼ö
     public int value = 1;               // Æ÷µµ °¡Ä¡
+    public int goldP = 10;              // °ñµå Æ÷µµ È®·ü
+    public int diamondP = 5;            // ´ÙÀÌ¾Æ Æ÷µµ È®·ü
     public int pSP = 0;                 // Æ÷µµ»ý¼º È®·ü
     public int bP = 0;                  // ºÎ½¤Áü È®·ü
     public int artiP = 1;               // ¾ÆÆ¼ÆÑÆ® ½ºÆù È®·ü
@@ -40,6 +42,8 @@ public class MainGameDirector : MonoBehaviour
 
         this.podoCount = PlayerPrefs.GetInt("podoCount", 30);
         this.value = PlayerPrefs.GetInt("value", 1);
+        this.goldP = PlayerPrefs.GetInt("goldP", 10);
+        this.diamondP = PlayerPrefs.GetInt("diamondP", 5);
         this.speed = PlayerPrefs.GetFloat("speed", 0.03f);
         this.pSP = PlayerPrefs.GetInt("pSP", 0);
         this.bP = PlayerPrefs.GetInt("bP", 0);

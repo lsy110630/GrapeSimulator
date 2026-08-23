@@ -5,6 +5,7 @@ using UnityEngine.Rendering.Universal;
 public class GrapeIncrease : MonoBehaviour
 {
     GameObject uDirector;
+    GameObject tooltip;
     bool maxIncrease = false;   // 업그레이드 가능 판단
 
     GameObject btn1;
@@ -15,13 +16,16 @@ public class GrapeIncrease : MonoBehaviour
     void Start()
     {
         this.uDirector = GameObject.Find("UpgradeDirector");
+        // 설명 찾고 숨기기
+        this.tooltip = GameObject.Find("GrapeIncreaseT");
+        this.tooltip.SetActive(false);
 
         // 2단계 업그레이드 버튼 모두 찾아놓기 & 숨기기
         this.btn1 = GameObject.Find("TimeIncrease");
         this.btn1.SetActive(false);
         this.btn2 = GameObject.Find("PodoSpawn");
         this.btn2.SetActive(false);
-        this.btn3 = GameObject.Find("Brake");
+        this.btn3 = GameObject.Find("Broke");
         this.btn3.SetActive(false);
         this.btn4 = GameObject.Find("EXIncrease");
         this.btn4.SetActive(false);
@@ -64,5 +68,15 @@ public class GrapeIncrease : MonoBehaviour
                 PlayerPrefs.Save();
             }
         }
+    }
+
+    public void ShowTooltip()
+    {
+        this.tooltip.SetActive(true);
+    }
+
+    public void HideTooltip()
+    {
+        this.tooltip.SetActive(false);
     }
 }

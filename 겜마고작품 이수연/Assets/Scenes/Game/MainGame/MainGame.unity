@@ -411,6 +411,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GrapeGenerator
   number: 0
   grape: {fileID: 4681979525548000546, guid: b243cee6b49f21b42bf8b5bd028345d7, type: 3}
+  goldgrape: {fileID: 8040159371438479728, guid: ff994b887eba494488197571dd184789, type: 3}
+  diamondgrape: {fileID: 3311743940119603514, guid: 731cab65739ab784cb5c8c608dc0eaf9, type: 3}
   glovepodo: {fileID: 4590361439316534853, guid: 6c1dcfe2b531c5843a5834481ee17ce0, type: 3}
   scissorspodo: {fileID: 4530676762151798937, guid: 328206ae9841b494ba96f9569582155d, type: 3}
   hatpodo: {fileID: 5743766700859876121, guid: a3fc1d5a87e5a354e86d9f779b9fb911, type: 3}
@@ -443,6 +445,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainTextManajor
   podo: 0
   podoCount: 30
+  value: 1
+  goldP: 1
+  diamondP: 1
   pSP: 0
   bP: 0
   artiP: 129000
