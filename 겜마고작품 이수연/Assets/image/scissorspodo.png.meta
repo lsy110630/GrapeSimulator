@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: af78212acc49343438954ac3282ba870
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2661952611464425055
+    second: scissorspodo_0
+  - first:
+      213: -2678506892778128959
+    second: scissorspodo_1
+  - first:
+      213: -8628464167060085306
+    second: scissorspodo_2
+  - first:
+      213: 8125173714981612998
+    second: scissorspodo_3
+  - first:
+      213: 7675945459210837186
+    second: scissorspodo_4
+  - first:
+      213: -4482757678542903934
+    second: scissorspodo_5
+  - first:
+      213: 4567583686229266122
+    second: scissorspodo_6
+  - first:
+      213: 7491176831046300048
+    second: scissorspodo_7
+  - first:
+      213: -5749811097152153898
+    second: scissorspodo_8
+  - first:
+      213: -1437140903263488119
+    second: scissorspodo_9
+  - first:
+      213: -2761576752710563959
+    second: scissorspodo_10
+  - first:
+      213: -616200660518186577
+    second: scissorspodo_11
+  - first:
+      213: -74688181183490617
+    second: scissorspodo_12
+  - first:
+      213: -4626940110545979185
+    second: scissorspodo_13
+  - first:
+      213: 2759971341509553215
+    second: scissorspodo_14
+  - first:
+      213: -8655830095171714036
+    second: scissorspodo_15
+  - first:
+      213: 2425206731843566591
+    second: scissorspodo_16
+  - first:
+      213: 9052288798014105755
+    second: scissorspodo_17
+  - first:
+      213: 1255125585587958201
+    second: scissorspodo_18
+  - first:
+      213: 6588083229152577295
+    second: scissorspodo_19
+  - first:
+      213: 2004487449541785556
+    second: scissorspodo_20
+  - first:
+      213: -1839913254021259105
+    second: scissorspodo_21
+  - first:
+      213: 4274931115102820999
+    second: scissorspodo_22
+  - first:
+      213: -8916136269336484777
+    second: scissorspodo_23
+  - first:
+      213: 7386618200578696041
+    second: scissorspodo_24
+  - first:
+      213: 881697849420948293
+    second: scissorspodo_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scissorspodo_12
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 92
+        width: 1145
+        height: 1108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c553a3be77a6fef0800000000000000
+      internalID: -74688181183490617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 63ff1a757aff88e4b86bb50e2ef64e75
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      scissorspodo_0: -2661952611464425055
+      scissorspodo_1: -2678506892778128959
+      scissorspodo_10: -2761576752710563959
+      scissorspodo_11: -616200660518186577
+      scissorspodo_12: -74688181183490617
+      scissorspodo_13: -4626940110545979185
+      scissorspodo_14: 2759971341509553215
+      scissorspodo_15: -8655830095171714036
+      scissorspodo_16: 2425206731843566591
+      scissorspodo_17: 9052288798014105755
+      scissorspodo_18: 1255125585587958201
+      scissorspodo_19: 6588083229152577295
+      scissorspodo_2: -8628464167060085306
+      scissorspodo_20: 2004487449541785556
+      scissorspodo_21: -1839913254021259105
+      scissorspodo_22: 4274931115102820999
+      scissorspodo_23: -8916136269336484777
+      scissorspodo_24: 7386618200578696041
+      scissorspodo_25: 881697849420948293
+      scissorspodo_3: 8125173714981612998
+      scissorspodo_4: 7675945459210837186
+      scissorspodo_5: -4482757678542903934
+      scissorspodo_6: 4567583686229266122
+      scissorspodo_7: 7491176831046300048
+      scissorspodo_8: -5749811097152153898
+      scissorspodo_9: -1437140903263488119
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

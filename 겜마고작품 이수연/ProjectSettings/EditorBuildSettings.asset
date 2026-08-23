@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Title/Title.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Save/Save.unity
+    guid: cfe91012417c7a444bcb5662807bc695
+  - enabled: 1
+    path: Assets/Scenes/Game/MainGame/MainGame.unity
+    guid: b745711c9fdbaaa419ca3a123d25ca13
+  - enabled: 1
+    path: Assets/Scenes/Game/Upgrade/Upgrade.unity
+    guid: e15a535bdbe31e547af5e05358aa0840
+  - enabled: 1
+    path: Assets/Scenes/Game/Mastery/Mastery.unity
+    guid: 106f341135bf12b49b3e16f679ea41d1
+  - enabled: 1
+    path: Assets/Scenes/Game/Artifact/Artifact.unity
+    guid: bd1c020ed30227742ade792ae417d41b
+  - enabled: 1
+    path: Assets/Scenes/Game/Mastery/Card/Card.unity
+    guid: 4fd640dde65832540922fe8f0ba1c50f
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_UseUCBPForAssetBundles: 0
