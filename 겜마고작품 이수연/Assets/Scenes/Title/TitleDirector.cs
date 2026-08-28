@@ -5,7 +5,7 @@ public class TitleDirector : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("Save");
+        SceneManager.LoadScene("Upgrade");
     }
 
     public void Quit()

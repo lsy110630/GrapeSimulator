@@ -13,6 +13,7 @@ public class UpgradeDirector : MonoBehaviour
     GameObject vnUN;              // 포도 가치 업그레이드 넘버 텍스트
     GameObject gpnUN;             // 골드 포도 확률 업그레이드 넘버 텍스트
     GameObject dpnUN;             // 다이아 포도 확률 업그레이드 넘버 텍스트
+    GameObject snUN;              // 속도 업그레이드 넘버 텍스트
 
     // 필요 데이터
     public int podo = 0;
@@ -39,6 +40,7 @@ public class UpgradeDirector : MonoBehaviour
     public int artiP = 1;             // 아티팩트 스폰 확률
 
     public float speed = 0.03f;       // 속도
+    public int sUN = 0;               // 속도 업그레이드 넘버
 
     // 아티팩트
     public int hatpodo = 0;
@@ -61,6 +63,7 @@ public class UpgradeDirector : MonoBehaviour
         this.vnUN = GameObject.Find("VUN");
         this.gpnUN = GameObject.Find("GPUN");
         this.dpnUN = GameObject.Find("DPUN");
+        this.snUN = GameObject.Find("SUN");
 
         // 필수 데이터 불러오기
         this.podo = PlayerPrefs.GetInt("podo", 0);
@@ -88,6 +91,7 @@ public class UpgradeDirector : MonoBehaviour
         this.artiP = PlayerPrefs.GetInt("artiP", 1);
 
         this.speed = PlayerPrefs.GetFloat("speed", 0.03f);
+        this.sUN = PlayerPrefs.GetInt("sUN", 0);
 
         PlayerPrefs.GetInt("artiP", 1);
 
@@ -111,5 +115,6 @@ public class UpgradeDirector : MonoBehaviour
         this.vnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().vUN.ToString() + " /" + " 5";
         this.gpnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().gpUN.ToString() + " /" + " 5";
         this.dpnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().dpUN.ToString() + " /" + " 5";
+        this.snUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().sUN.ToString() + " /" + " 5";
     }
 }

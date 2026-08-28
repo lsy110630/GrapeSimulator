@@ -12,19 +12,20 @@ public class MASceneSwitch : MonoBehaviour
 
     public void Upgrade()
     {
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Upgrade");
     }
 
     public void Mastery()
     {
-        SceneManager.LoadScene("Mastery");
         PlayerPrefs.Save();
+        SceneManager.LoadScene("Mastery");
     }
 
     public void Artifact()
     {
-        SceneManager.LoadScene("Artifact");
         PlayerPrefs.Save();
+        SceneManager.LoadScene("Artifact");
     }
 
     public void Card()

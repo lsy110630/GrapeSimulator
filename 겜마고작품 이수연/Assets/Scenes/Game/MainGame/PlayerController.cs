@@ -29,11 +29,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A) && this.transform.position.x > -8)
         {
             this.transform.Translate(-speed, 0, 0);
+            this.GetComponent<SpriteRenderer>().flipX = true;
         }
 
         if (Input.GetKey(KeyCode.D) && this.transform.position.x < 8)
         {
             this.transform.Translate(speed, 0, 0);
+            this.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 }
