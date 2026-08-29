@@ -46,6 +46,9 @@ public class GrapePrefab : MonoBehaviour
     {
         if (collision.gameObject.tag == "Circle")
         {
+            // 포도 애니메이션 작동
+            this.GetComponent<Animator>().Play("GrapeAnimation");
+
             this.delta += Time.deltaTime;
             if (this.delta > span)
             {
@@ -64,6 +67,15 @@ public class GrapePrefab : MonoBehaviour
                 // 나 터짐
                 Destroy(this.gameObject);
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Circle")
+        {
+            // 포도 에니메이션 종료
+            this.GetComponent<Animator>().Play("GrapeIdle");
         }
     }
 }

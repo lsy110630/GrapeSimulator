@@ -1,0 +1,411 @@
+fileFormatVersion: 2
+guid: ae76612f83ec4f84cbb1c02ec5cd9315
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7722589712604217832
+    second: GrapeAni_0
+  - first:
+      213: -6832167635492612889
+    second: GrapeAni_1
+  - first:
+      213: -1234224445076773212
+    second: GrapeAni_2
+  - first:
+      213: 7000652505494987611
+    second: GrapeAni_3
+  - first:
+      213: -5871172750641663284
+    second: GrapeAni_4
+  - first:
+      213: -2893456320816909060
+    second: GrapeAni_5
+  - first:
+      213: 5474728841056609063
+    second: GrapeAni_6
+  - first:
+      213: -1856853532291339544
+    second: GrapeAni_7
+  - first:
+      213: -174480829698849887
+    second: GrapeAni_8
+  - first:
+      213: 1585896504288471229
+    second: GrapeAni_9
+  - first:
+      213: 2208900078987765499
+    second: GrapeAni_10
+  - first:
+      213: 5028439909437366072
+    second: GrapeAni_11
+  - first:
+      213: -8204909466742077132
+    second: GrapeAni_12
+  - first:
+      213: 8838123517997299531
+    second: GrapeAni_13
+  - first:
+      213: 1288091809288672541
+    second: GrapeAni_14
+  - first:
+      213: -2064636843062549918
+    second: GrapeAni_15
+  - first:
+      213: 6507616992564224371
+    second: GrapeAni_16
+  - first:
+      213: 8455978332688425426
+    second: GrapeAni_17
+  - first:
+      213: -3306361862256725484
+    second: GrapeAni_18
+  - first:
+      213: 3925194579203906201
+    second: GrapeAni_19
+  - first:
+      213: 6026712914878257409
+    second: GrapeAni_20
+  - first:
+      213: -3199021642484211974
+    second: GrapeAni_21
+  - first:
+      213: -2463800861967305814
+    second: GrapeAni_22
+  - first:
+      213: -7179090050523601116
+    second: GrapeAni_23
+  - first:
+      213: -3940320006270262687
+    second: GrapeAni_24
+  - first:
+      213: 6018383520808581959
+    second: GrapeAni_25
+  - first:
+      213: -7442028397755060461
+    second: GrapeAni_26
+  - first:
+      213: -134555861587365531
+    second: GrapeAni_27
+  - first:
+      213: -1560152936616309293
+    second: GrapeAni_28
+  - first:
+      213: -6187679006091918805
+    second: GrapeAni_29
+  - first:
+      213: 2106526974472606958
+    second: GrapeAni_30
+  - first:
+      213: 8261696666672388577
+    second: GrapeAni_31
+  - first:
+      213: 7882294914057455737
+    second: GrapeAni_32
+  - first:
+      213: 3124293889132010002
+    second: GrapeAni_33
+  - first:
+      213: 7624086646071798943
+    second: GrapeAni_34
+  - first:
+      213: 5219300367888890851
+    second: GrapeAni_35
+  - first:
+      213: -8294861609820057186
+    second: GrapeAni_36
+  - first:
+      213: 2751348322113249151
+    second: GrapeAni_37
+  - first:
+      213: 3286031804772093871
+    second: GrapeAni_38
+  - first:
+      213: -2704860007615687103
+    second: GrapeAni_39
+  - first:
+      213: -5847740954287962737
+    second: GrapeAni_40
+  - first:
+      213: 971446238980590674
+    second: GrapeAni_41
+  - first:
+      213: 6240267994448448312
+    second: GrapeAni_42
+  - first:
+      213: -538358649703462801
+    second: GrapeAni_43
+  - first:
+      213: -4355252221324891963
+    second: GrapeAni_44
+  - first:
+      213: -6907163313894390845
+    second: GrapeAni_45
+  - first:
+      213: -813660353906740429
+    second: GrapeAni_46
+  - first:
+      213: 911283948406746548
+    second: GrapeAni_47
+  - first:
+      213: -8200435553312775349
+    second: GrapeAni_48
+  - first:
+      213: -1815274108853411005
+    second: GrapeAni_49
+  - first:
+      213: -7254328060407340229
+    second: GrapeAni_50
+  - first:
+      213: -6590012965900932344
+    second: GrapeAni_51
+  - first:
+      213: 3785117749090977678
+    second: GrapeAni_52
+  - first:
+      213: 1255884115291535828
+    second: GrapeAni_53
+  - first:
+      213: 6912895205373831613
+    second: GrapeAni_54
+  - first:
+      213: -825647465778551738
+    second: GrapeAni_55
+  - first:
+      213: 4489929119883068447
+    second: GrapeAni_56
+  - first:
+      213: -1657094655411423072
+    second: GrapeAni_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GrapeAni_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 307
+        width: 384
+        height: 452
+      alignment: 9
+      pivot: {x: 0.49367568, y: 0.3603045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81eb32a8299d3d490800000000000000
+      internalID: -7722589712604217832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrapeAni_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 311
+        width: 350
+        height: 354
+      alignment: 9
+      pivot: {x: 0.5485712, y: 0.4691287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4da80ebb34f21a0800000000000000
+      internalID: -6832167635492612889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrapeAni_2
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 254
+        width: 374
+        height: 408
+      alignment: 9
+      pivot: {x: 0.5194983, y: 0.5325886}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a6681a08672fdee0800000000000000
+      internalID: -1234224445076773212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrapeAni_3
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 213
+        width: 395
+        height: 449
+      alignment: 9
+      pivot: {x: 0.5039962, y: 0.60018784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b532af9dc50572160800000000000000
+      internalID: 7000652505494987611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 164b09e4c41a1ec48a3246acadb56693
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":384.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      GrapeAni_0: -7722589712604217832
+      GrapeAni_1: -6832167635492612889
+      GrapeAni_2: -1234224445076773212
+      GrapeAni_3: 7000652505494987611
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
