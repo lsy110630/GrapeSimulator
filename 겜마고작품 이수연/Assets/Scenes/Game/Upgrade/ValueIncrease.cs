@@ -26,17 +26,17 @@ public class ValueIncrease : MonoBehaviour
     public void Increase()
     {
         // 업그레이드가 가능한만큼 주스가 있는지 판단
-        if (this.uDirector.GetComponent<UpgradeDirector>().juice >= 30)
+        if (this.uDirector.GetComponent<UpgradeDirector>().jucie >= 30)
         {
             if (maxIncrease == false)
             {
                 this.uDirector.GetComponent<UpgradeDirector>().vUN += 1;        // 업그레이드 넘버를 가져와 늘린다
 
-                this.uDirector.GetComponent<UpgradeDirector>().juice -= 30;     // juice를 가져와 줄인다
+                this.uDirector.GetComponent<UpgradeDirector>().jucie -= 30;     // juice를 가져와 줄인다
 
                 this.uDirector.GetComponent<UpgradeDirector>().value += 1;       // 포도 가치를 가져와 늘린다
 
-                PlayerPrefs.SetInt("juice", this.uDirector.GetComponent<UpgradeDirector>().juice);
+                PlayerPrefs.SetInt("jucie", this.uDirector.GetComponent<UpgradeDirector>().jucie);
                 PlayerPrefs.SetInt("value", this.uDirector.GetComponent<UpgradeDirector>().value);
                 PlayerPrefs.SetInt("vUN", this.uDirector.GetComponent<UpgradeDirector>().vUN);
 

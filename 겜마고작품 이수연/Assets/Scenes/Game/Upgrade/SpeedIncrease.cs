@@ -26,17 +26,17 @@ public class SpeedIncrease : MonoBehaviour
     public void Increase()
     {
         // 업그레이드가 가능한만큼 주스가 있는지 판단
-        if (this.uDirector.GetComponent<UpgradeDirector>().juice >= 10)
+        if (this.uDirector.GetComponent<UpgradeDirector>().jucie >= 10)
         {
             if (maxIncrease == false)
             {
                 this.uDirector.GetComponent<UpgradeDirector>().EXUN += 1;          // 업그레이드 넘버를 가져와 늘린다
 
-                this.uDirector.GetComponent<UpgradeDirector>().juice -= 10;        // juice를 가져와 줄인다
+                this.uDirector.GetComponent<UpgradeDirector>().jucie -= 10;        // juice를 가져와 줄인다
 
                 this.uDirector.GetComponent<UpgradeDirector>().speed *= 1.1f;         // 속도 가져와 늘린다
 
-                PlayerPrefs.SetInt("juice", this.uDirector.GetComponent<UpgradeDirector>().juice);
+                PlayerPrefs.SetInt("jucie", this.uDirector.GetComponent<UpgradeDirector>().jucie);
                 PlayerPrefs.SetInt("speed", this.uDirector.GetComponent<UpgradeDirector>().addEX);
                 PlayerPrefs.SetInt("sUN", this.uDirector.GetComponent<UpgradeDirector>().EXUN);
                 PlayerPrefs.Save();

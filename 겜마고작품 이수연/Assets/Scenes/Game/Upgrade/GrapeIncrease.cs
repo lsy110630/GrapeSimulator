@@ -52,17 +52,17 @@ public class GrapeIncrease : MonoBehaviour
     public void Increase()
     {
         // 업그레이드가 가능한만큼 주스가 있는지 판단
-        if (this.uDirector.GetComponent<UpgradeDirector>().juice >= 5)
+        if (this.uDirector.GetComponent<UpgradeDirector>().jucie >= 5)
         {
             if (maxIncrease == false)
             {
                 this.uDirector.GetComponent<UpgradeDirector>().gUN += 1;      // 업그레이드 넘버를 가져와 늘린다
 
-                this.uDirector.GetComponent<UpgradeDirector>().juice -= 5;     // juice를 가져와 줄인다
+                this.uDirector.GetComponent<UpgradeDirector>().jucie -= 5;     // juice를 가져와 줄인다
 
                 this.uDirector.GetComponent<UpgradeDirector>().podoCount += 1; // 포도개수를 가져와 늘린다
 
-                PlayerPrefs.SetInt("juice", this.uDirector.GetComponent<UpgradeDirector>().juice);
+                PlayerPrefs.SetInt("jucie", this.uDirector.GetComponent<UpgradeDirector>().jucie);
                 PlayerPrefs.SetInt("podoCount", this.uDirector.GetComponent<UpgradeDirector>().podoCount);
                 PlayerPrefs.SetInt("gUN", this.uDirector.GetComponent<UpgradeDirector>().gUN);
                 PlayerPrefs.Save();

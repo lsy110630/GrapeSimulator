@@ -8,15 +8,19 @@ public class MainGameDirector : MonoBehaviour
     GameObject Circle;                  // 먹는 범위 원
 
     GameObject grape;                   // 먹은 포도 개수 텍스트
+    GameObject ggrape;                  // 먹은 골드 포도 개수 텍스트
+    GameObject dgrape;                  // 먹은 다이아 포도 개수 텍스트
     GameObject levelT;                  // 레벨텍스트
     GameObject EXT;                     // 경험치 텍스트
     GameObject maxEXT;                  // 최대경험치 텍스트
-
-    public int podo = 0;
+     
+    public int podo = 0;                // 그냥 포도
+    public int goldpodo = 0;            // 골드 포도
+    public int diamondpodo = 0;         // 다이아 포도
     public int podoCount = 30;          // 포도 개수
     public int value = 1;               // 포도 가치
-    public int goldP = 10;              // 골드 포도 확률
-    public int diamondP = 5;            // 다이아 포도 확률
+    public int goldP = 0;               // 골드 포도 확률
+    public int diamondP = 0;            // 다이아 포도 확률
     public int pSP = 0;                 // 포도생성 확률
     public int bP = 0;                  // 부숴짐 확률
     public int artiP = 1;               // 아티팩트 스폰 확률
@@ -42,8 +46,8 @@ public class MainGameDirector : MonoBehaviour
 
         this.podoCount = PlayerPrefs.GetInt("podoCount", 30);
         this.value = PlayerPrefs.GetInt("value", 1);
-        this.goldP = PlayerPrefs.GetInt("goldP", 10);
-        this.diamondP = PlayerPrefs.GetInt("diamondP", 5);
+        this.goldP = PlayerPrefs.GetInt("goldP", 0);
+        this.diamondP = PlayerPrefs.GetInt("diamondP", 0);
         this.speed = PlayerPrefs.GetFloat("speed", 0.03f);
         this.pSP = PlayerPrefs.GetInt("pSP", 0);
         this.bP = PlayerPrefs.GetInt("bP", 0);
@@ -92,6 +96,8 @@ public class MainGameDirector : MonoBehaviour
 
         podo = 0;
         this.grape = GameObject.Find("Grape");
+        this.ggrape = GameObject.Find("GGrape");
+        this.dgrape = GameObject.Find("DGrape");
         this.levelT = GameObject.Find("levelT");
         this.EXT = GameObject.Find("EXT");
         this.maxEXT = GameObject.Find("maxEXT");
@@ -99,8 +105,12 @@ public class MainGameDirector : MonoBehaviour
 
     void Update()
     {
-        // podo 변수를 텍스트로 띄우기
+        // 포도를 텍스트로 띄우기
         this.grape.GetComponent<TextMeshProUGUI>().text = podo.ToString();
+        // 골드 포도를 텍스트로 띄우기
+        this.ggrape.GetComponent<TextMeshProUGUI>().text = goldpodo.ToString();
+        // 다이아 포도를 텍스트로 띄우기
+        this.dgrape.GetComponent<TextMeshProUGUI>().text = diamondpodo.ToString();
         // 레벨 띄우기
         this.levelT.GetComponent<TextMeshProUGUI>().text = level.ToString();
         // 현재 경험치량 띄우기

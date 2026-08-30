@@ -24,9 +24,19 @@ public class Timeout : MonoBehaviour
             PlayerPrefs.SetInt("podo", this.mDirector.GetComponent<MainGameDirector>().podo);
 
             // 주스 데이터 불러와서 누적
-            int juice = PlayerPrefs.GetInt("juice", 0); // 원래 주스 개수
-            juice += this.mDirector.GetComponent<MainGameDirector>().podo / 3; // 포도 / 3 만큼 추가
-            PlayerPrefs.SetInt("juice", juice); // 저장
+            int jucie = PlayerPrefs.GetInt("jucie", 0); // 원래 주스 개수
+            jucie += this.mDirector.GetComponent<MainGameDirector>().podo / 3; // 포도 / 3 만큼 추가
+            PlayerPrefs.SetInt("jucie", jucie); // 저장
+
+            // 골드 주스 데이터 불러와서 누적
+            int goldjucie = PlayerPrefs.GetInt("goldjucie", 0); // 원래 골드 주스 개수
+            goldjucie += this.mDirector.GetComponent<MainGameDirector>().goldpodo / 3; // 포도 / 3 만큼 추가
+            PlayerPrefs.SetInt("goldjucie", goldjucie); // 저장
+
+            // 다이아 주스 데이터 불러와서 누적
+            int diamondjucie = PlayerPrefs.GetInt("diamondjucie", 0); // 원래 다이아 주스 개수
+            diamondjucie += this.mDirector.GetComponent<MainGameDirector>().diamondpodo / 3; // 포도 / 3 만큼 추가
+            PlayerPrefs.SetInt("diamondjucie", diamondjucie); // 저장
 
             PlayerPrefs.SetInt("token", this.mDirector.GetComponent<MainGameDirector>().token);
 

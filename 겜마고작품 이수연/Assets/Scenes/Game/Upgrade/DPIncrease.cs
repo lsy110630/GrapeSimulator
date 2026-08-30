@@ -26,17 +26,17 @@ public class DPIncrease : MonoBehaviour
     public void Increase()
     {
         // 업그레이드가 가능한만큼 주스가 있는지 판단
-        if (this.uDirector.GetComponent<UpgradeDirector>().juice >= 25)
+        if (this.uDirector.GetComponent<UpgradeDirector>().jucie >= 25)
         {
             if (maxIncrease == false)
             {
                 this.uDirector.GetComponent<UpgradeDirector>().dpUN += 1;        // 업그레이드 넘버를 가져와 늘린다
 
-                this.uDirector.GetComponent<UpgradeDirector>().juice -= 25;     // juice를 가져와 줄인다
+                this.uDirector.GetComponent<UpgradeDirector>().jucie -= 25;     // juice를 가져와 줄인다
 
                 this.uDirector.GetComponent<UpgradeDirector>().diamondP += 1;   // 다이아 포도 생성확률 가져와 늘린다
 
-                PlayerPrefs.SetInt("juice", this.uDirector.GetComponent<UpgradeDirector>().juice);
+                PlayerPrefs.SetInt("jucie", this.uDirector.GetComponent<UpgradeDirector>().jucie);
                 PlayerPrefs.SetInt("diamondP", this.uDirector.GetComponent<UpgradeDirector>().diamondP);
                 PlayerPrefs.SetInt("dpUN", this.uDirector.GetComponent<UpgradeDirector>().dpUN);
 

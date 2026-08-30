@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: f685751e0545b5c48ab36cce37d58ce9
+guid: f9277e85f9886ca4abce3b58faa27c24
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7766721758921934520
-    second: scissors_0
-  - first:
-      213: 6388603711314454826
-    second: scissors_1
+      213: -7192340265473318268
+    second: goldjucie_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: scissors_0
+      name: goldjucie_0
       rect:
         serializedVersion: 2
-        x: 215
-        y: 48
-        width: 975
-        height: 1125
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 233
+        y: 62
+        width: 841
+        height: 1184
+      alignment: 9
+      pivot: {x: 0.42792052, y: 0.46288103}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b6c6d53a40f8cb60800000000000000
-      internalID: 7766721758921934520
+      spriteID: 48269bc92acaf2c90800000000000000
+      internalID: -7192340265473318268
       vertices: []
       indices: 
       edges: []
@@ -154,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6269bd1e5e05e7443988727a74040423
+    spriteID: 79b65bfac2c25044e851d3aad59d4745
     internalID: 0
     vertices: []
     indices: 
@@ -164,8 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      scissors_0: 7766721758921934520
-      scissors_1: 6388603711314454826
+      goldjucie_0: -7192340265473318268
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -4,6 +4,8 @@ using UnityEngine;
 public class UpgradeDirector : MonoBehaviour
 {
     GameObject j;
+    GameObject gj;                // 골드 주스
+    GameObject dj;                // 다이아 주스
     GameObject tk;             
     GameObject gnUN;              // 포도개수 업그레이드 넘버 텍스트
     GameObject tnUN;              // 시간증가 업그레이드 넘버 텍스트
@@ -16,8 +18,12 @@ public class UpgradeDirector : MonoBehaviour
     GameObject snUN;              // 속도 업그레이드 넘버 텍스트
 
     // 필요 데이터
-    public int podo = 0;
-    public int juice = 0;
+    public int podo = 0;              // 그냥 포도
+    public int goldpodo = 0;          // 골드 포도
+    public int diamondpodo = 0;       // 다이아 포도
+    public int jucie = 0;             // 그냥 주스
+    public int goldjucie = 0;         // 골드 주스
+    public int diamondjucie = 0;      // 다이아 주스
     public int token = 0;
     public int podoCount = 30;        // 포도개수
     public int gUN = 0;               // 포도개수 증가 업그레이드 넘버
@@ -32,9 +38,9 @@ public class UpgradeDirector : MonoBehaviour
     public int value = 1;             // 포도 가치
     public int vUN = 0;               // 포도 가치 업그레이드 넘버
 
-    public int goldP = 10;            // 골드 포도 확률
+    public int goldP = 0;             // 골드 포도 확률
     public int gpUN = 0;              // 골드 포도 확률 업그레이드 넘버
-    public int diamondP = 5;          // 다이아 포도 확률
+    public int diamondP = 0;          // 다이아 포도 확률
     public int dpUN = 0;              // 다이아 포도 확률 업그레이드 넘버
 
     public int artiP = 1;             // 아티팩트 스폰 확률
@@ -54,6 +60,8 @@ public class UpgradeDirector : MonoBehaviour
         Application.targetFrameRate = 60;
 
         this.j = GameObject.Find("J");
+        this.gj = GameObject.Find("GJ");
+        this.dj = GameObject.Find("DJ");
         this.tk = GameObject.Find("TK");
         this.gnUN = GameObject.Find("GUN");
         this.tnUN = GameObject.Find("TUN");
@@ -67,7 +75,9 @@ public class UpgradeDirector : MonoBehaviour
 
         // 필수 데이터 불러오기
         this.podo = PlayerPrefs.GetInt("podo", 0);
-        this.juice = PlayerPrefs.GetInt("juice", 0);
+        this.jucie = PlayerPrefs.GetInt("jucie", 0);
+        this.goldjucie = PlayerPrefs.GetInt("glodjucie", 0);
+        this.diamondjucie = PlayerPrefs.GetInt("diamondjucie", 0);
         this.token = PlayerPrefs.GetInt("token", 0);
         this.podoCount = PlayerPrefs.GetInt("podoCount", 30);
         this.gUN = PlayerPrefs.GetInt("gUN", 0);
@@ -82,9 +92,9 @@ public class UpgradeDirector : MonoBehaviour
         this.value = PlayerPrefs.GetInt("value", 1);
         this.vUN = PlayerPrefs.GetInt("vUN", 0);
 
-        this.goldP = PlayerPrefs.GetInt("goldP", 10);
+        this.goldP = PlayerPrefs.GetInt("goldP", 0);
         this.gpUN = PlayerPrefs.GetInt("gpUN", 0);
-        this.diamondP = PlayerPrefs.GetInt("diamondP", 5);
+        this.diamondP = PlayerPrefs.GetInt("diamondP", 0);
         this.dpUN = PlayerPrefs.GetInt("dpUN", 0);
 
 
@@ -105,7 +115,9 @@ public class UpgradeDirector : MonoBehaviour
 
     void Update()
     {
-        this.j.GetComponent<TextMeshProUGUI>().text = juice.ToString();
+        this.j.GetComponent<TextMeshProUGUI>().text = jucie.ToString();
+        this.gj.GetComponent<TextMeshProUGUI>().text = goldjucie.ToString();
+        this.dj.GetComponent<TextMeshProUGUI>().text = diamondjucie.ToString();
         this.tk.GetComponent<TextMeshProUGUI>().text = token.ToString();
         this.gnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().gUN.ToString() + " /" + " 5";
         this.tnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().tUN.ToString() + " /" + " 5";

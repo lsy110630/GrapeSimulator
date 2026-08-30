@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: f685751e0545b5c48ab36cce37d58ce9
+guid: 34c4d0635d671124da1069845be3ae38
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7766721758921934520
-    second: scissors_0
+      213: 1945808313159836732
+    second: diamondjucie_0
   - first:
-      213: 6388603711314454826
-    second: scissors_1
+      213: 1066522085698526146
+    second: diamondjucie_1
+  - first:
+      213: 4905064391497988781
+    second: diamondjucie_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,23 +132,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: scissors_0
+      name: diamondjucie_0
       rect:
         serializedVersion: 2
-        x: 215
-        y: 48
-        width: 975
-        height: 1125
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 216
+        y: 24
+        width: 894
+        height: 1251
+      alignment: 9
+      pivot: {x: 0.41882318, y: 0.4722029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b6c6d53a40f8cb60800000000000000
-      internalID: 7766721758921934520
+      spriteID: c34e4eaf956e00b10800000000000000
+      internalID: 1945808313159836732
       vertices: []
       indices: 
       edges: []
@@ -154,7 +157,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6269bd1e5e05e7443988727a74040423
+    spriteID: 3273b2373c0a94a4bbce7582243a3424
     internalID: 0
     vertices: []
     indices: 
@@ -164,8 +167,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      scissors_0: 7766721758921934520
-      scissors_1: 6388603711314454826
+      diamondjucie_0: 1945808313159836732
+      diamondjucie_1: 1066522085698526146
+      diamondjucie_2: 4905064391497988781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

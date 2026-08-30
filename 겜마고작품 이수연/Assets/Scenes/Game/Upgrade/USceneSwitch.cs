@@ -32,7 +32,9 @@ public class USceneSwitch : MonoBehaviour
     {
         // 필수 데이터 저장
         PlayerPrefs.SetInt("podo", this.uDirector.GetComponent<UpgradeDirector>().podo);
-        PlayerPrefs.SetInt("juice", this.uDirector.GetComponent<UpgradeDirector>().juice);                   // 주스 개수
+        PlayerPrefs.SetInt("jucie", this.uDirector.GetComponent<UpgradeDirector>().jucie);                   // 주스 개수
+        PlayerPrefs.SetInt("goldjucie", this.uDirector.GetComponent<UpgradeDirector>().goldjucie);           // 골드 주스 개수
+        PlayerPrefs.SetInt("diamondjucie", this.uDirector.GetComponent<UpgradeDirector>().diamondjucie);     // 다이아 주스 개수
         PlayerPrefs.SetInt("token", this.uDirector.GetComponent<UpgradeDirector>().token);                   // 토큰 개수
         PlayerPrefs.SetInt("podoCount", this.uDirector.GetComponent<UpgradeDirector>().podoCount);           // 생성 포도 개수
         PlayerPrefs.SetInt("time", this.uDirector.GetComponent<UpgradeDirector>().time);                     // 겜 시간
@@ -74,7 +76,9 @@ public class USceneSwitch : MonoBehaviour
     public void Reset()
     {
         PlayerPrefs.SetInt("podo", 0);
-        PlayerPrefs.SetInt("juice", 0);
+        PlayerPrefs.SetInt("jucie", 0);
+        PlayerPrefs.SetInt("goldjucie", 0);
+        PlayerPrefs.SetInt("diamondjucie", 0);
         PlayerPrefs.SetInt("podoCount", 30);
         PlayerPrefs.SetInt("gUN", 0);
         PlayerPrefs.SetInt("time", 15);
