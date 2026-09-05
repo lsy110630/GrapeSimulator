@@ -29,7 +29,7 @@ public class GrapeGenerator : MonoBehaviour
         // 포도를 30개 소환한다
         for (int i = 0; i < number; i++)
         {
-            int dice = Random.Range(1, 10001);    
+            int dice = Random.Range(1, 1001);    
             int gold = Random.Range(1, 101);      
             int diamond = Random.Range(1, 101);    
 

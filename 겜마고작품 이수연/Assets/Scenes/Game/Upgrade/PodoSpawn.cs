@@ -16,9 +16,9 @@ public class PodoSpawn : MonoBehaviour
         this.tooltip = GameObject.Find("PodoSpawnT");
         this.tooltip.SetActive(false);
 
-        this.btn1 = GameObject.Find("GPIncrease");
+        this.btn1 = GameObject.Find("addGP");
         this.btn1.SetActive(false);
-        this.btn2 = GameObject.Find("DPIncrease");
+        this.btn2 = GameObject.Find("addDP");
         this.btn2.SetActive(false);
     }
 

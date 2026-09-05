@@ -4,6 +4,7 @@ public class GPIncrease : MonoBehaviour
 {
     GameObject uDirector;
     GameObject tooltip;
+    public int pay = 15;
     bool maxIncrease = false;   // 업그레이드 가능 판단
 
     void Start()
@@ -26,17 +27,19 @@ public class GPIncrease : MonoBehaviour
     public void Increase()
     {
         // 업그레이드가 가능한만큼 주스가 있는지 판단
-        if (this.uDirector.GetComponent<UpgradeDirector>().jucie >= 20)
+        if (this.uDirector.GetComponent<UpgradeDirector>().goldjucie >= pay)
         {
             if (maxIncrease == false)
             {
-                this.uDirector.GetComponent<UpgradeDirector>().gpUN += 1;        // 업그레이드 넘버를 가져와 늘린다
+                this.uDirector.GetComponent<UpgradeDirector>().gpUN += 1;              // 업그레이드 넘버를 가져와 늘린다
 
-                this.uDirector.GetComponent<UpgradeDirector>().jucie -= 20;     // juice를 가져와 줄인다
+                this.uDirector.GetComponent<UpgradeDirector>().goldjucie -= pay;       // juice를 가져와 줄인다
 
-                this.uDirector.GetComponent<UpgradeDirector>().goldP += 1;       // 골드 포도 생성확률 가져와 늘린다
+                this.uDirector.GetComponent<UpgradeDirector>().goldP += 1;             // 골드 포도 생성확률 가져와 늘린다
 
-                PlayerPrefs.SetInt("jucie", this.uDirector.GetComponent<UpgradeDirector>().jucie);
+                this.pay += 5;
+
+                PlayerPrefs.SetInt("goldjucie", this.uDirector.GetComponent<UpgradeDirector>().goldjucie);
                 PlayerPrefs.SetInt("goldP", this.uDirector.GetComponent<UpgradeDirector>().goldP);
                 PlayerPrefs.SetInt("gpUN", this.uDirector.GetComponent<UpgradeDirector>().gpUN);
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpeedIncrease : MonoBehaviour
+public class GrapeIncreaseD : MonoBehaviour
 {
     GameObject uDirector;
     GameObject tooltip;
@@ -10,14 +10,14 @@ public class SpeedIncrease : MonoBehaviour
     {
         this.uDirector = GameObject.Find("UpgradeDirector");
         // 설명 찾고 숨기기
-        this.tooltip = GameObject.Find("SpeedIncreaseT");
+        this.tooltip = GameObject.Find("GrapeIncreaseDT");
         this.tooltip.SetActive(false);
     }
 
     void Update()
     {
         // 업그레이드가 최대치인지 판단
-        if (this.uDirector.GetComponent<UpgradeDirector>().sUN >= 5)
+        if (this.uDirector.GetComponent<UpgradeDirector>().gUND >= 5)
         {
             this.maxIncrease = true;
         }
@@ -26,19 +26,19 @@ public class SpeedIncrease : MonoBehaviour
     public void Increase()
     {
         // 업그레이드가 가능한만큼 주스가 있는지 판단
-        if (this.uDirector.GetComponent<UpgradeDirector>().jucie >= 10)
+        if (this.uDirector.GetComponent<UpgradeDirector>().jucie >= 5)
         {
             if (maxIncrease == false)
             {
-                this.uDirector.GetComponent<UpgradeDirector>().sUN += 1;              // 업그레이드 넘버를 가져와 늘린다
+                this.uDirector.GetComponent<UpgradeDirector>().gUND += 1;      // 업그레이드 넘버를 가져와 늘린다
 
-                this.uDirector.GetComponent<UpgradeDirector>().jucie -= 10;           // juice를 가져와 줄인다
+                this.uDirector.GetComponent<UpgradeDirector>().jucie -= 5;     // juice를 가져와 줄인다
 
-                this.uDirector.GetComponent<UpgradeDirector>().speed *= 1.1f;         // 속도 가져와 늘린다
+                this.uDirector.GetComponent<UpgradeDirector>().podoCount += 1; // 포도개수를 가져와 늘린다
 
                 PlayerPrefs.SetInt("jucie", this.uDirector.GetComponent<UpgradeDirector>().jucie);
-                PlayerPrefs.SetInt("speed", this.uDirector.GetComponent<UpgradeDirector>().addEX);
-                PlayerPrefs.SetInt("sUN", this.uDirector.GetComponent<UpgradeDirector>().sUN);
+                PlayerPrefs.SetInt("podoCount", this.uDirector.GetComponent<UpgradeDirector>().podoCount);
+                PlayerPrefs.SetInt("gUND", this.uDirector.GetComponent<UpgradeDirector>().gUND);
                 PlayerPrefs.Save();
             }
         }

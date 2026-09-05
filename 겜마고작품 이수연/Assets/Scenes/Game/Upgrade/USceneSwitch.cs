@@ -52,8 +52,12 @@ public class USceneSwitch : MonoBehaviour
 
         // 각 업그레이드 상황
         PlayerPrefs.SetInt("gUN", this.uDirector.GetComponent<UpgradeDirector>().gUN);
+        PlayerPrefs.SetInt("gUNG", this.uDirector.GetComponent<UpgradeDirector>().gUNG);
+        PlayerPrefs.SetInt("gUND", this.uDirector.GetComponent<UpgradeDirector>().gUND);
         PlayerPrefs.SetInt("tUN", this.uDirector.GetComponent<UpgradeDirector>().tUN);
         PlayerPrefs.SetInt("vUN", this.uDirector.GetComponent<UpgradeDirector>().vUN);
+        PlayerPrefs.SetInt("addGPUN", this.uDirector.GetComponent<UpgradeDirector>().addGPUN);               // 골드 포도 추가
+        PlayerPrefs.SetInt("addDPUN", this.uDirector.GetComponent<UpgradeDirector>().addDPUN);               // 다이아 포도 추가
         PlayerPrefs.SetInt("gpUN", this.uDirector.GetComponent<UpgradeDirector>().gpUN);
         PlayerPrefs.SetInt("dpUN", this.uDirector.GetComponent<UpgradeDirector>().dpUN);
         PlayerPrefs.SetInt("pSPUN", this.uDirector.GetComponent<UpgradeDirector>().pSPUN);
@@ -81,13 +85,17 @@ public class USceneSwitch : MonoBehaviour
         PlayerPrefs.SetInt("diamondjucie", 0);
         PlayerPrefs.SetInt("podoCount", 30);
         PlayerPrefs.SetInt("gUN", 0);
+        PlayerPrefs.SetInt("gUNG", 0);
+        PlayerPrefs.SetInt("gUND", 0);
         PlayerPrefs.SetInt("time", 15);
         PlayerPrefs.SetInt("tUN", 0);
         PlayerPrefs.SetInt("value", 1);
         PlayerPrefs.SetInt("vUN", 0);
-        PlayerPrefs.SetInt("goldP", 10);
+        PlayerPrefs.SetInt("addGPUN", 0);
+        PlayerPrefs.SetInt("addDPUN", 0);
+        PlayerPrefs.SetInt("goldP", 0);
         PlayerPrefs.SetInt("gpUN", 0);
-        PlayerPrefs.SetInt("diamondP", 5);
+        PlayerPrefs.SetInt("diamondP", 0);
         PlayerPrefs.SetInt("dpUN", 0);
 
         PlayerPrefs.SetInt("pSP", 0);
@@ -104,6 +112,7 @@ public class USceneSwitch : MonoBehaviour
         PlayerPrefs.SetInt("EXUN", 0);
 
         PlayerPrefs.SetFloat("speed", 0.03f);
+        PlayerPrefs.SetInt("sUN", 0);
 
         PlayerPrefs.SetInt("artiP", 1);
 
@@ -115,6 +124,6 @@ public class USceneSwitch : MonoBehaviour
 
         PlayerPrefs.Save();
 
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Upgrade");
     }
 }
