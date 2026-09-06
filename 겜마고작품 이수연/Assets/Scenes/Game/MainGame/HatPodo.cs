@@ -10,6 +10,7 @@ public class HatPodo : MonoBehaviour
     private void Awake()
     {
         this.director = GameObject.Find("MainDirector");
+        this.span = this.director.GetComponent<MainGameDirector>().span;
     }
 
     private void Update()

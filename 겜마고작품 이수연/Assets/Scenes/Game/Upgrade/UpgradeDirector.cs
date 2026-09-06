@@ -20,6 +20,7 @@ public class UpgradeDirector : MonoBehaviour
     GameObject dpnUN;             // 다이아 포도 확률 업그레이드 넘버 텍스트
     GameObject DPpay;
     GameObject snUN;              // 속도 업그레이드 넘버 텍스트
+    GameObject spnUN;             // 포도 획득 속도 업그레이드 넘버 텍스트
     GameObject addDPnUN;          // 골드 포도 추가 업그레이드 넘버 텍스트
     GameObject addGPnUN;          // 다이아 포도 추가 업그레이드 넘버 텍스트
 
@@ -37,7 +38,7 @@ public class UpgradeDirector : MonoBehaviour
     public int gUNG = 0;              // 골드 쪽 포도개수 증가 업그레이드 넘버
     public int gUND = 0;              // 다이아 쪽 포도개수 증가 업그레이드 넘버
 
-    public int time = 15;             // 시간증가
+    public float time = 15f;          // 시간증가
     public int tUN = 0;               // 시간 증가 업그레이드 넘버
     public int pSP = 0;               // 포도 스폰확률
     public int pSPUN = 0;             // 포도 스폰확률 업그레이드 넘버
@@ -58,6 +59,12 @@ public class UpgradeDirector : MonoBehaviour
 
     public float speed = 0.03f;       // 속도
     public int sUN = 0;               // 속도 업그레이드 넘버
+
+    public float span = 3.0f;         // 포도 획득 속도
+    public int spUN = 0;              // 포도 획득 속도 업그레이드 넘버
+
+    public int badP = 0;              // 안 좋은 이벤트 확률
+    public int goodP = 0;             // 좋은 이벤트 확률
 
     // 아티팩트
     public int hatpodo = 0;
@@ -89,6 +96,7 @@ public class UpgradeDirector : MonoBehaviour
         this.dpnUN = GameObject.Find("DPUN");
         this.DPpay = GameObject.Find("DPpay");
         this.snUN = GameObject.Find("SUN");
+        this.spnUN = GameObject.Find("SPUN");
 
         // 필수 데이터 불러오기
         this.podo = PlayerPrefs.GetInt("podo", 0);
@@ -100,7 +108,7 @@ public class UpgradeDirector : MonoBehaviour
         this.gUN = PlayerPrefs.GetInt("gUN", 0);
         this.gUNG = PlayerPrefs.GetInt("gUNG", 0);
         this.gUND = PlayerPrefs.GetInt("gUND", 0);
-        this.time = PlayerPrefs.GetInt("time", 15);
+        this.time = PlayerPrefs.GetFloat("time", 15f);
         this.tUN = PlayerPrefs.GetInt("tUN", 0);
         this.pSP = PlayerPrefs.GetInt("pSP", 0);
         this.pSPUN = PlayerPrefs.GetInt("pSPUN", 0);
@@ -122,6 +130,12 @@ public class UpgradeDirector : MonoBehaviour
 
         this.speed = PlayerPrefs.GetFloat("speed", 0.03f);
         this.sUN = PlayerPrefs.GetInt("sUN", 0);
+
+        this.span = PlayerPrefs.GetFloat("span", 3.0f);
+        this.spUN = PlayerPrefs.GetInt("spUN", 0);
+
+        this.badP = PlayerPrefs.GetInt("badP", 0);
+        this.goodP = PlayerPrefs.GetInt("goodP", 0);
 
         PlayerPrefs.GetInt("artiP", 1);
 
@@ -158,5 +172,6 @@ public class UpgradeDirector : MonoBehaviour
         this.DPpay.GetComponent<TextMeshProUGUI>().text = "다이아포도주스 " + this.GetComponent<DPIncrease>().pay.ToString() + "개";
 
         this.snUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().sUN.ToString() + " /" + " 5";
+        this.spnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().spUN.ToString() + " /" + " 5";
     }
 }

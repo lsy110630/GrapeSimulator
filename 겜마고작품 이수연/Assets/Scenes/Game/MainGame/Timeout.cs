@@ -1,4 +1,5 @@
 using TMPro;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,13 +7,17 @@ public class Timeout : MonoBehaviour
 {
     GameObject clock;
     public float time = 15f;
+    public int badP = 0;                // 안 좋은 이벤트 확률
+    public int goodP = 0;               // 좋은 이벤트 확률
     GameObject mDirector;
 
     void Start()
     {
         this.clock = GameObject.Find("Time");
         this.mDirector = GameObject.Find("MainDirector");
-        this.time = PlayerPrefs.GetInt("time", 15);
+        this.time = PlayerPrefs.GetFloat("time", 15f);
+        this.badP = PlayerPrefs.GetInt("badP", 0);
+        this.goodP = PlayerPrefs.GetInt("goodP", 0);
     }
 
     void Update()
@@ -51,11 +56,20 @@ public class Timeout : MonoBehaviour
             PlayerPrefs.SetInt("diamondP", this.mDirector.GetComponent<MainGameDirector>().diamondP);
 
             // 겜 시간
-            int time = PlayerPrefs.GetInt("time", 15);
-            PlayerPrefs.SetInt("time", time);
+            float time = PlayerPrefs.GetFloat("time", 15);
+            PlayerPrefs.SetFloat("time", time);
 
             // 캐릭터 속도
             PlayerPrefs.SetFloat("speed", this.mDirector.GetComponent<MainGameDirector>().speed);
+
+            // 포도 획득 속도
+            PlayerPrefs.SetFloat("span", this.mDirector.GetComponent<MainGameDirector>().span);
+
+            // 안 좋은 이벤트 발생확률
+            PlayerPrefs.SetInt("badP", this.mDirector.GetComponent<MainGameDirector>().badP);
+
+            // 좋은 이벤트 발생확률
+            PlayerPrefs.SetInt("goodP", this.mDirector.GetComponent<MainGameDirector>().goodP);
 
             // 포도를 먹었을때 포도가 새로 생성될 확률
             PlayerPrefs.SetInt("pSP", this.mDirector.GetComponent<MainGameDirector>().pSP);
@@ -88,6 +102,28 @@ public class Timeout : MonoBehaviour
         else
         {
             time -= 0.01f;
+        }
+
+        float span = 2.0f;       // 이벤트 주기
+        float delta = 0;         // 시간재기
+        delta += Time.deltaTime;
+        if (delta > span)
+        {
+            int dice1 = Random.Range(1, 101);
+            if (dice1 <= badP + goodP)
+            {
+                int dice2 = Random.Range(1, badP + goodP + 1);
+                if (dice2 < badP)
+                {
+                    this.mDirector.GetComponent<MainGameDirector>().badEvent();
+                }
+                else // good
+                {
+                    this.mDirector.GetComponent<MainGameDirector>().goodEvent();
+                } 
+            }
+            
+            delta = 0;
         }
     }
 }

@@ -13,7 +13,9 @@ public class MainGameDirector : MonoBehaviour
     GameObject levelT;                  // 레벨텍스트
     GameObject EXT;                     // 경험치 텍스트
     GameObject maxEXT;                  // 최대경험치 텍스트
-     
+    GameObject bad;                     // 안 좋은 이벤트
+    GameObject good;                    // 좋은 이벤트
+
     public int podo = 0;                // 그냥 포도
     public int goldpodo = 0;            // 골드 포도
     public int diamondpodo = 0;         // 다이아 포도
@@ -26,6 +28,10 @@ public class MainGameDirector : MonoBehaviour
     public int artiP = 1;               // 아티팩트 스폰 확률
 
     public float speed = 0.03f;         // 속도
+    public float span = 3.0f;           // 포도 획득 속도
+
+    public int badP = 0;                // 안 좋은 이벤트 확률
+    public int goodP = 0;               // 좋은 이벤트 확률
 
     // 아티팩트 있는지 없는지
     public int hatpodo = 0;
@@ -43,12 +49,22 @@ public class MainGameDirector : MonoBehaviour
     private void Awake()
     {
         this.Circle = GameObject.Find("Circle");
+        // 이벤트 숨겨두기
+        this.bad = GameObject.Find("bad");
+        this.bad.SetActive(false);
+        this.good = GameObject.Find("good");
+        this.good.SetActive(false);
 
         this.podoCount = PlayerPrefs.GetInt("podoCount", 30);
         this.value = PlayerPrefs.GetInt("value", 1);
         this.goldP = PlayerPrefs.GetInt("goldP", 0);
         this.diamondP = PlayerPrefs.GetInt("diamondP", 0);
         this.speed = PlayerPrefs.GetFloat("speed", 0.03f);
+        this.span = PlayerPrefs.GetFloat("span", 3.0f);
+
+        this.badP = PlayerPrefs.GetInt("badP", 0);
+        this.goodP = PlayerPrefs.GetInt("goodP", 0);
+
         this.pSP = PlayerPrefs.GetInt("pSP", 0);
         this.bP = PlayerPrefs.GetInt("bP", 0);
         this.artiP = PlayerPrefs.GetInt("artiP", 1);
@@ -128,6 +144,51 @@ public class MainGameDirector : MonoBehaviour
 
             maxEX *= 2;
             EX = 0;
+        }
+    }
+
+    public void badEvent()
+    {
+        this.bad.SetActive(true);
+
+        float speed = this.speed;
+
+        this.speed = 0f;         // 속도 감소
+
+        float span = 1.0f;       // 속도 감소 시간
+        float delta = 0;         // 시간재기
+        delta += Time.deltaTime;
+
+        if (delta > 0.5f)
+        {
+            this.bad.SetActive(false);
+        }
+
+        if (delta > span)
+        {
+            this.speed = speed;
+        }
+    }
+
+    public void goodEvent()
+    {
+        this.good.SetActive(true);
+
+        float speed = this.speed;
+
+        this.speed = speed * 1.5f;         // 속도 증가
+
+        float span = 1.0f;                 // 속도 증가 시간
+        float delta = 0;                   // 시간재기
+        delta += Time.deltaTime;
+        if (delta > 0.5f)
+        {
+            this.good.SetActive(false);
+        }
+
+        if (delta > span)
+        {
+            this.speed = speed;
         }
     }
 }

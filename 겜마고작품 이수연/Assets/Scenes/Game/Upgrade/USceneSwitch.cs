@@ -37,7 +37,7 @@ public class USceneSwitch : MonoBehaviour
         PlayerPrefs.SetInt("diamondjucie", this.uDirector.GetComponent<UpgradeDirector>().diamondjucie);     // 다이아 주스 개수
         PlayerPrefs.SetInt("token", this.uDirector.GetComponent<UpgradeDirector>().token);                   // 토큰 개수
         PlayerPrefs.SetInt("podoCount", this.uDirector.GetComponent<UpgradeDirector>().podoCount);           // 생성 포도 개수
-        PlayerPrefs.SetInt("time", this.uDirector.GetComponent<UpgradeDirector>().time);                     // 겜 시간
+        PlayerPrefs.SetFloat("time", this.uDirector.GetComponent<UpgradeDirector>().time);                   // 겜 시간
         PlayerPrefs.SetInt("value", this.uDirector.GetComponent<UpgradeDirector>().value);                   // 포도 가치
         PlayerPrefs.SetInt("goldP", this.uDirector.GetComponent<UpgradeDirector>().goldP);                   // 골드 포도 생성될 확률
         PlayerPrefs.SetInt("diamondP", this.uDirector.GetComponent<UpgradeDirector>().diamondP);             // 다이아 포도 생성될 확률
@@ -47,6 +47,10 @@ public class USceneSwitch : MonoBehaviour
         PlayerPrefs.SetInt("addEX", this.uDirector.GetComponent<UpgradeDirector>().addEX);                   // 추가로 얻을 경첨치
 
         PlayerPrefs.SetFloat("speed", this.uDirector.GetComponent<UpgradeDirector>().speed);                 // 캐릭터 속도
+        PlayerPrefs.SetFloat("span", this.uDirector.GetComponent<UpgradeDirector>().span);                   // 포도 획득 속도
+
+        PlayerPrefs.SetInt("badP", this.uDirector.GetComponent<UpgradeDirector>().badP);                     // 안 좋은 이벤트 발생확률
+        PlayerPrefs.SetInt("goodP", this.uDirector.GetComponent<UpgradeDirector>().goodP);                     // 좋은 이벤트 발생확률
 
         PlayerPrefs.SetInt("artiP", this.uDirector.GetComponent<UpgradeDirector>().artiP);                   // 아티팩트 생성 확률
 
@@ -87,7 +91,7 @@ public class USceneSwitch : MonoBehaviour
         PlayerPrefs.SetInt("gUN", 0);
         PlayerPrefs.SetInt("gUNG", 0);
         PlayerPrefs.SetInt("gUND", 0);
-        PlayerPrefs.SetInt("time", 15);
+        PlayerPrefs.SetFloat("time", 15f);
         PlayerPrefs.SetInt("tUN", 0);
         PlayerPrefs.SetInt("value", 1);
         PlayerPrefs.SetInt("vUN", 0);
@@ -113,6 +117,11 @@ public class USceneSwitch : MonoBehaviour
 
         PlayerPrefs.SetFloat("speed", 0.03f);
         PlayerPrefs.SetInt("sUN", 0);
+
+        PlayerPrefs.SetFloat("span", 3.0f);
+
+        PlayerPrefs.SetFloat("badP", 0);
+        PlayerPrefs.SetFloat("goodP", 0);
 
         PlayerPrefs.SetInt("artiP", 1);
 

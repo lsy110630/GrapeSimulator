@@ -2,21 +2,24 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// 씬이 시작되면 랜덤 카드 3개가 나오고 카드를 고르면 그 카드에 해당하는 능력치를 올리고 돌아간다
 public class Card : MonoBehaviour
 {
     public GameObject[] cards; // 전체 카드
 
     public int podo = 0;
     public int juice = 0;
-    public int token = 0;         // 토큰 개수
-    public int podoCount = 30;    // 포도개수
-    public int time = 15;         // 시간증가
-    public int pSP = 0;           // 포도 스폰확률
-    public int bP = 0;            // 부숴질 확률
-    public int addEX = 0;         // 추가 경험치
-
-
+    public int token = 0;           // 토큰 개수
+    public int podoCount = 30;      // 포도개수
+    public int time = 15;           // 시간증가
+    public int pSP = 0;             // 포도 스폰확률
+    public int bP = 0;              // 부숴질 확률
+    public int addEX = 0;           // 추가 경험치
+    public int artiP = 1;           // 아티팩트 확률
+    public float speed = 0.03f;     // 속도
+    public float span = 3.0f;       // 획득속도
+    public int badP = 0;            // 안 좋은 이벤트 확률
+    public int goodP = 0;           // 좋은 이벤트 확률
+    public int value = 1;           // 가치
 
     private void Awake()
     {
@@ -28,6 +31,12 @@ public class Card : MonoBehaviour
         this.pSP = PlayerPrefs.GetInt("pSP", 0);
         this.bP = PlayerPrefs.GetInt("bP", 0);
         this.addEX = PlayerPrefs.GetInt("addEX", 0);
+        this.artiP = PlayerPrefs.GetInt("artiP", 1);
+        this.speed = PlayerPrefs.GetFloat("speed", 0.03f);
+        this.span = PlayerPrefs.GetFloat("span", 3.0f);
+        this.badP = PlayerPrefs.GetInt("badP", 0);
+        this.goodP = PlayerPrefs.GetInt("goodP", 0);
+        this.value = PlayerPrefs.GetInt("value", 1);
     }
 
 
@@ -79,51 +88,101 @@ public class Card : MonoBehaviour
 
     public void Card1()
     {
+        this.speed += speed * 1.1f;
+        PlayerPrefs.SetFloat("speed", speed);
+
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Mastery");
     }
 
     public void Card2()
     {
+        this.podoCount += 1;
+        PlayerPrefs.SetInt("podoCount", podoCount);
+
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Mastery");
     }
 
     public void Card3()
     {
+        this.artiP += 1;
+        PlayerPrefs.SetInt("artiP", artiP);
+
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Mastery");
     }
 
     public void Card4()
     {
+        this.time += 1;
+        PlayerPrefs.SetInt("time", time);
+
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Mastery");
     }
 
     public void Card5()
     {
+        this.artiP += 5;
+        PlayerPrefs.SetInt("artiP", artiP);
+        this.badP += 1;
+        PlayerPrefs.SetInt("badP", badP);
+
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Mastery");
     }
 
     public void Card6()
     {
+        this.speed += speed * 1.3f;
+        PlayerPrefs.SetFloat("speed", speed);
+        this.badP += 1;
+        PlayerPrefs.SetInt("badP", badP);
+
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Mastery");
     }
 
     public void Card7()
     {
+        this.podoCount += 5;
+        PlayerPrefs.SetInt("podoCount", podoCount);
+        this.badP += 1;
+        PlayerPrefs.SetInt("badP", badP);
+
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Mastery");
     }
 
     public void Card8()
     {
+        this.goodP += 1;
+        PlayerPrefs.SetInt("goodP", goodP);
+
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Mastery");
     }
 
     public void Card9()
     {
+        this.goodP += 1;
+        PlayerPrefs.SetInt("goodP", goodP);
+        this.value += 1;
+        PlayerPrefs.SetInt("value", value);
+
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Mastery");
     }
 
     public void Card10()
     {
+        this.goodP += 3;
+        PlayerPrefs.SetInt("goodP", goodP);
+        this.badP += 3;
+        PlayerPrefs.SetInt("badP", badP);
+
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Mastery");
     }
 
