@@ -29,7 +29,7 @@ public class SpanDecrease : MonoBehaviour
         }
 
         // 두개의 조건이 충족하면 나온다
-        if (this.uDirector.GetComponent<UpgradeDirector>().bPUN >= 1 || this.uDirector.GetComponent<UpgradeDirector>().tUN >= 1)
+        if (this.uDirector.GetComponent<UpgradeDirector>().bPUN >= 1 && this.uDirector.GetComponent<UpgradeDirector>().tUN >= 1)
         {
             this.btn.SetActive(true);
         }

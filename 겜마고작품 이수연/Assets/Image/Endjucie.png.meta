@@ -1,10 +1,31 @@
 fileFormatVersion: 2
-guid: e947270c367218342b7e848fcb9920cd
+guid: 63135c205ac67f744af40059e87e21d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3899264874753553345
-    second: chat_0
+      213: -5088338329892221656
+    second: Endjucie_0
+  - first:
+      213: 5234348183066524567
+    second: Endjucie_1
+  - first:
+      213: -8918852697831942704
+    second: Endjucie_2
+  - first:
+      213: 3226215593764564001
+    second: Endjucie_3
+  - first:
+      213: -4592683277419569063
+    second: Endjucie_4
+  - first:
+      213: 6866599219593238494
+    second: Endjucie_5
+  - first:
+      213: -3712861570926115959
+    second: Endjucie_6
+  - first:
+      213: -5301814421321108758
+    second: Endjucie_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +147,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chat_0
+      name: Endjucie_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 304
-        width: 965
-        height: 568
+        x: 0
+        y: 0
+        width: 1222
+        height: 1287
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c3f7d09eb8fc1630800000000000000
-      internalID: 3899264874753553345
+      spriteID: 82d05c58f379269b0800000000000000
+      internalID: -5088338329892221656
       vertices: []
       indices: 
       edges: []
@@ -151,7 +172,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2efa5a56b0c222443abf883178ea9a25
+    spriteID: d76c309bcb8dd4d4a83c8c81cd7f4d1d
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +182,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chat_0: 3899264874753553345
+      Endjucie_0: -5088338329892221656
+      Endjucie_1: 5234348183066524567
+      Endjucie_2: -8918852697831942704
+      Endjucie_3: 3226215593764564001
+      Endjucie_4: -4592683277419569063
+      Endjucie_5: 6866599219593238494
+      Endjucie_6: -3712861570926115959
+      Endjucie_7: -5301814421321108758
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -152,21 +152,16 @@ public class MainGameDirector : MonoBehaviour
         this.bad.SetActive(true);
 
         float speed = this.speed;
+        this.speed = 0.01f;         // 속도 감소
 
-        this.speed = 0f;         // 속도 감소
-
-        float span = 1.0f;       // 속도 감소 시간
+        float span = 2.0f;       // 속도 감소 시간
         float delta = 0;         // 시간재기
+
         delta += Time.deltaTime;
-
-        if (delta > 0.5f)
-        {
-            this.bad.SetActive(false);
-        }
-
         if (delta > span)
         {
             this.speed = speed;
+            delta = 0;
         }
     }
 
@@ -175,20 +170,16 @@ public class MainGameDirector : MonoBehaviour
         this.good.SetActive(true);
 
         float speed = this.speed;
-
         this.speed = speed * 1.5f;         // 속도 증가
 
-        float span = 1.0f;                 // 속도 증가 시간
+        float span = 2.0f;                 // 속도 증가 시간
         float delta = 0;                   // 시간재기
-        delta += Time.deltaTime;
-        if (delta > 0.5f)
-        {
-            this.good.SetActive(false);
-        }
 
+        delta += Time.deltaTime;
         if (delta > span)
         {
             this.speed = speed;
+            delta = 0;
         }
     }
 }

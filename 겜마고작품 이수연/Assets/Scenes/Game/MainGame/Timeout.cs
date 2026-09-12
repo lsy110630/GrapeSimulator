@@ -10,11 +10,17 @@ public class Timeout : MonoBehaviour
     public int badP = 0;                // 안 좋은 이벤트 확률
     public int goodP = 0;               // 좋은 이벤트 확률
     GameObject mDirector;
+    GameObject bad;
+    GameObject good;
 
     void Start()
     {
         this.clock = GameObject.Find("Time");
         this.mDirector = GameObject.Find("MainDirector");
+        this.bad = GameObject.Find("bad");
+        this.bad.SetActive(false);
+        this.good = GameObject.Find("good");
+        this.good.SetActive(false);
         this.time = PlayerPrefs.GetFloat("time", 15f);
         this.badP = PlayerPrefs.GetInt("badP", 0);
         this.goodP = PlayerPrefs.GetInt("goodP", 0);
@@ -104,8 +110,10 @@ public class Timeout : MonoBehaviour
             time -= 0.01f;
         }
 
-        float span = 2.0f;       // 이벤트 주기
+        float span = 3.0f;       // 이벤트 주기
+        float span2 = 1.0f;      // 이벤트가 알림화면 시간
         float delta = 0;         // 시간재기
+        float delta2 = 0;        // 시간재기2
         delta += Time.deltaTime;
         if (delta > span)
         {
@@ -115,10 +123,28 @@ public class Timeout : MonoBehaviour
                 int dice2 = Random.Range(1, badP + goodP + 1);
                 if (dice2 < badP)
                 {
+                    this.bad.SetActive(true);
+
+                    delta2 += Time.deltaTime;
+                    if (delta2 > span2)
+                    {
+                        this.bad.SetActive(false);
+                        delta2 = 0;
+                    }
+
                     this.mDirector.GetComponent<MainGameDirector>().badEvent();
                 }
                 else // good
                 {
+                    this.good.SetActive(true);
+
+                    delta2 += Time.deltaTime;
+                    if (delta2 > span2)
+                    {
+                        this.good.SetActive(false);
+                        delta2 = 0;
+                    }
+
                     this.mDirector.GetComponent<MainGameDirector>().goodEvent();
                 } 
             }

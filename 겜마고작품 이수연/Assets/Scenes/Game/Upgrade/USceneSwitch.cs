@@ -56,8 +56,6 @@ public class USceneSwitch : MonoBehaviour
 
         // 각 업그레이드 상황
         PlayerPrefs.SetInt("gUN", this.uDirector.GetComponent<UpgradeDirector>().gUN);
-        PlayerPrefs.SetInt("gUNG", this.uDirector.GetComponent<UpgradeDirector>().gUNG);
-        PlayerPrefs.SetInt("gUND", this.uDirector.GetComponent<UpgradeDirector>().gUND);
         PlayerPrefs.SetInt("tUN", this.uDirector.GetComponent<UpgradeDirector>().tUN);
         PlayerPrefs.SetInt("vUN", this.uDirector.GetComponent<UpgradeDirector>().vUN);
         PlayerPrefs.SetInt("addGPUN", this.uDirector.GetComponent<UpgradeDirector>().addGPUN);               // 골드 포도 추가
@@ -89,8 +87,6 @@ public class USceneSwitch : MonoBehaviour
         PlayerPrefs.SetInt("diamondjucie", 0);
         PlayerPrefs.SetInt("podoCount", 30);
         PlayerPrefs.SetInt("gUN", 0);
-        PlayerPrefs.SetInt("gUNG", 0);
-        PlayerPrefs.SetInt("gUND", 0);
         PlayerPrefs.SetFloat("time", 15f);
         PlayerPrefs.SetInt("tUN", 0);
         PlayerPrefs.SetInt("value", 1);

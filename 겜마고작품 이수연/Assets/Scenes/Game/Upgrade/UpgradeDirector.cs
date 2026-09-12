@@ -23,6 +23,7 @@ public class UpgradeDirector : MonoBehaviour
     GameObject spnUN;             // 포도 획득 속도 업그레이드 넘버 텍스트
     GameObject addDPnUN;          // 골드 포도 추가 업그레이드 넘버 텍스트
     GameObject addGPnUN;          // 다이아 포도 추가 업그레이드 넘버 텍스트
+    GameObject EndnUN;            // 엔딩 업그레이드 텍스트
 
     // 필요 데이터
     public int podo = 0;              // 그냥 포도
@@ -35,8 +36,6 @@ public class UpgradeDirector : MonoBehaviour
     public int podoCount = 30;        // 포도개수
 
     public int gUN = 0;               // 포도개수 증가 업그레이드 넘버
-    public int gUNG = 0;              // 골드 쪽 포도개수 증가 업그레이드 넘버
-    public int gUND = 0;              // 다이아 쪽 포도개수 증가 업그레이드 넘버
 
     public float time = 15f;          // 시간증가
     public int tUN = 0;               // 시간 증가 업그레이드 넘버
@@ -65,6 +64,8 @@ public class UpgradeDirector : MonoBehaviour
 
     public int badP = 0;              // 안 좋은 이벤트 확률
     public int goodP = 0;             // 좋은 이벤트 확률
+
+    public int EndUN = 0;             // 엔딩 업그레이드 넘버
 
     // 아티팩트
     public int hatpodo = 0;
@@ -106,8 +107,6 @@ public class UpgradeDirector : MonoBehaviour
         this.token = PlayerPrefs.GetInt("token", 0);
         this.podoCount = PlayerPrefs.GetInt("podoCount", 30);
         this.gUN = PlayerPrefs.GetInt("gUN", 0);
-        this.gUNG = PlayerPrefs.GetInt("gUNG", 0);
-        this.gUND = PlayerPrefs.GetInt("gUND", 0);
         this.time = PlayerPrefs.GetFloat("time", 15f);
         this.tUN = PlayerPrefs.GetInt("tUN", 0);
         this.pSP = PlayerPrefs.GetInt("pSP", 0);
@@ -137,7 +136,7 @@ public class UpgradeDirector : MonoBehaviour
         this.badP = PlayerPrefs.GetInt("badP", 0);
         this.goodP = PlayerPrefs.GetInt("goodP", 0);
 
-        PlayerPrefs.GetInt("artiP", 1);
+        this.EndUN = PlayerPrefs.GetInt("EndUN", 0);
 
         // 아티팩트
         this.hatpodo = PlayerPrefs.GetInt("hatpodo", 0);
@@ -154,8 +153,6 @@ public class UpgradeDirector : MonoBehaviour
         this.dj.GetComponent<TextMeshProUGUI>().text = diamondjucie.ToString();
         this.tk.GetComponent<TextMeshProUGUI>().text = token.ToString();
         this.gnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().gUN.ToString() + " /" + " 5";
-        this.gnUNG.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().gUNG.ToString() + " /" + " 5";
-        this.gnUND.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().gUND.ToString() + " /" + " 5";
         this.tnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().tUN.ToString() + " /" + " 5";
         this.pspnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().pSPUN.ToString() + " /" + " 5";
         this.bpnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().bPUN.ToString() + " /" + " 5";
@@ -173,5 +170,7 @@ public class UpgradeDirector : MonoBehaviour
 
         this.snUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().sUN.ToString() + " /" + " 5";
         this.spnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().spUN.ToString() + " /" + " 5";
+
+        this.EndnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().EndUN.ToString() + " /" + " 1";
     }
 }

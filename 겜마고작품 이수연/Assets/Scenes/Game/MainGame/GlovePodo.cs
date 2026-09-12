@@ -48,6 +48,9 @@ public class GlovePodo : MonoBehaviour
     {
         if (collision.gameObject.tag == "Circle")
         {
+            // 포도 애니메이션 작동
+            this.GetComponent<Animator>().Play("GloveAnimation");
+
             this.delta += Time.deltaTime;
             if (this.delta > span)
             {
@@ -67,6 +70,15 @@ public class GlovePodo : MonoBehaviour
 
                 Destroy(this.gameObject);             // 없어진다
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Circle")
+        {
+            // 포도 에니메이션 종료
+            this.GetComponent<Animator>().Play("GloveIdle");
         }
     }
 }

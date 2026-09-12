@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: d4a5c1ad65d8a854b833e096341df2a7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5450627844227057787
+    second: ScissorsAni_0
+  - first:
+      213: -6140312385719932505
+    second: ScissorsAni_1
+  - first:
+      213: 3763927957826493032
+    second: ScissorsAni_2
+  - first:
+      213: -6355028766148103035
+    second: ScissorsAni_3
+  - first:
+      213: -3441341709308593766
+    second: ScissorsAni_4
+  - first:
+      213: 3005103433430389093
+    second: ScissorsAni_5
+  - first:
+      213: 1161594653847126650
+    second: ScissorsAni_6
+  - first:
+      213: -9189386671005139354
+    second: ScissorsAni_7
+  - first:
+      213: -2382840717794167393
+    second: ScissorsAni_8
+  - first:
+      213: 771009832510106370
+    second: ScissorsAni_9
+  - first:
+      213: -1420933423660795012
+    second: ScissorsAni_10
+  - first:
+      213: -9157056452676107076
+    second: ScissorsAni_11
+  - first:
+      213: -3786842105177759779
+    second: ScissorsAni_12
+  - first:
+      213: -6262973082031155673
+    second: ScissorsAni_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ScissorsAni_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 188
+        width: 316
+        height: 397
+      alignment: 9
+      pivot: {x: 0.5201515, y: 0.44065207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e770b928db87080800000000000000
+      internalID: -9189386671005139354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScissorsAni_8
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 189
+        width: 329
+        height: 390
+      alignment: 9
+      pivot: {x: 0.50193566, y: 0.44775087}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f95ba83fdf27eeed0800000000000000
+      internalID: -2382840717794167393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScissorsAni_9
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 189
+        width: 331
+        height: 394
+      alignment: 9
+      pivot: {x: 0.48460954, y: 0.4482813}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b29119b5d23ba00800000000000000
+      internalID: 771009832510106370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScissorsAni_10
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 188
+        width: 315
+        height: 374
+      alignment: 9
+      pivot: {x: 0.5020221, y: 0.47275785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7bf7316494d74ce0800000000000000
+      internalID: -1420933423660795012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScissorsAni_11
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 178
+        width: 295
+        height: 387
+      alignment: 9
+      pivot: {x: 0.5086351, y: 0.47202745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4ca062ca99be080800000000000000
+      internalID: -9157056452676107076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScissorsAni_12
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 172
+        width: 291
+        height: 402
+      alignment: 9
+      pivot: {x: 0.51531833, y: 0.41762957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf136c3b2f627bc0800000000000000
+      internalID: -3786842105177759779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScissorsAni_13
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 172
+        width: 257
+        height: 381
+      alignment: 9
+      pivot: {x: 0.51734537, y: 0.42813167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72613bf1a237519a0800000000000000
+      internalID: -6262973082031155673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8a332bb904ccb6b4cb426ed732e48184
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":2.0},"gridSpriteSize":{"x":310.0,"y":362.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ScissorsAni_0: -5450627844227057787
+      ScissorsAni_1: -6140312385719932505
+      ScissorsAni_10: -1420933423660795012
+      ScissorsAni_11: -9157056452676107076
+      ScissorsAni_12: -3786842105177759779
+      ScissorsAni_13: -6262973082031155673
+      ScissorsAni_2: 3763927957826493032
+      ScissorsAni_3: -6355028766148103035
+      ScissorsAni_4: -3441341709308593766
+      ScissorsAni_5: 3005103433430389093
+      ScissorsAni_6: 1161594653847126650
+      ScissorsAni_7: -9189386671005139354
+      ScissorsAni_8: -2382840717794167393
+      ScissorsAni_9: 771009832510106370
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
