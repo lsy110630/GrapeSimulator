@@ -13,13 +13,17 @@ public class Timeout : MonoBehaviour
     GameObject bad;
     GameObject good;
 
+    private void Awake()
+    {
+        this.bad = GameObject.Find("bad");
+        this.good = GameObject.Find("good");
+    }
+
     void Start()
     {
         this.clock = GameObject.Find("Time");
         this.mDirector = GameObject.Find("MainDirector");
-        this.bad = GameObject.Find("bad");
         this.bad.SetActive(false);
-        this.good = GameObject.Find("good");
         this.good.SetActive(false);
         this.time = PlayerPrefs.GetFloat("time", 15f);
         this.badP = PlayerPrefs.GetInt("badP", 0);

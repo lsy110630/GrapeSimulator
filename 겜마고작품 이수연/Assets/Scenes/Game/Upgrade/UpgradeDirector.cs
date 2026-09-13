@@ -8,8 +8,6 @@ public class UpgradeDirector : MonoBehaviour
     GameObject dj;                // 다이아 주스
     GameObject tk;             
     GameObject gnUN;              // 포도개수 업그레이드 넘버 텍스트
-    GameObject gnUNG;             // 골드 쪽 포도개수 업그레이드 넘버 텍스트
-    GameObject gnUND;             // 다이아 쪽 포도개수 업그레이드 넘버 텍스트
     GameObject tnUN;              // 시간증가 업그레이드 넘버 텍스트
     GameObject pspnUN;            // 포도스폰 확률 업그레이드 넘버 텍스트
     GameObject bpnUN;             // 부숴짐 업그레이드 넘버 텍스트
@@ -82,9 +80,7 @@ public class UpgradeDirector : MonoBehaviour
         this.gj = GameObject.Find("GJ");
         this.dj = GameObject.Find("DJ");
         this.tk = GameObject.Find("TK");
-        this.gnUN = GameObject.Find("GUNG");
-        this.gnUNG = GameObject.Find("GUND");
-        this.gnUND = GameObject.Find("GUN");
+        this.gnUN = GameObject.Find("GUN");
         this.tnUN = GameObject.Find("TUN");
         this.pspnUN = GameObject.Find("pspnUN");
         this.bpnUN = GameObject.Find("bPUN");
@@ -98,6 +94,7 @@ public class UpgradeDirector : MonoBehaviour
         this.DPpay = GameObject.Find("DPpay");
         this.snUN = GameObject.Find("SUN");
         this.spnUN = GameObject.Find("SPUN");
+        this.EndnUN = GameObject.Find("ENDUN");
 
         // 필수 데이터 불러오기
         this.podo = PlayerPrefs.GetInt("podo", 0);

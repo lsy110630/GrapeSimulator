@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Card : MonoBehaviour
 {
     public GameObject[] cards; // 전체 카드
+    AudioManager audioManager;
 
     public int podo = 0;
     public int juice = 0;
@@ -23,6 +24,8 @@ public class Card : MonoBehaviour
 
     private void Awake()
     {
+        this.audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+
         this.podo = PlayerPrefs.GetInt("podo", 0);
         this.juice = PlayerPrefs.GetInt("juice", 0);
         this.token = PlayerPrefs.GetInt("token", 0);
@@ -78,20 +81,13 @@ public class Card : MonoBehaviour
         cards[card3].SetActive(true);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SceneManager.LoadScene("Card");
-        } 
-    }
-
     public void Card1()
     {
         this.speed += speed * 1.1f;
         PlayerPrefs.SetFloat("speed", speed);
 
         PlayerPrefs.Save();
+        this.audioManager.PlayButtonClick();
         SceneManager.LoadScene("Mastery");
     }
 
@@ -101,6 +97,7 @@ public class Card : MonoBehaviour
         PlayerPrefs.SetInt("podoCount", podoCount);
 
         PlayerPrefs.Save();
+        this.audioManager.PlayButtonClick();
         SceneManager.LoadScene("Mastery");
     }
 
@@ -110,6 +107,7 @@ public class Card : MonoBehaviour
         PlayerPrefs.SetInt("artiP", artiP);
 
         PlayerPrefs.Save();
+        this.audioManager.PlayButtonClick();
         SceneManager.LoadScene("Mastery");
     }
 
@@ -119,6 +117,7 @@ public class Card : MonoBehaviour
         PlayerPrefs.SetInt("time", time);
 
         PlayerPrefs.Save();
+        this.audioManager.PlayButtonClick();
         SceneManager.LoadScene("Mastery");
     }
 
@@ -130,6 +129,7 @@ public class Card : MonoBehaviour
         PlayerPrefs.SetInt("badP", badP);
 
         PlayerPrefs.Save();
+        this.audioManager.PlayButtonClick();
         SceneManager.LoadScene("Mastery");
     }
 
@@ -141,6 +141,7 @@ public class Card : MonoBehaviour
         PlayerPrefs.SetInt("badP", badP);
 
         PlayerPrefs.Save();
+        this.audioManager.PlayButtonClick();
         SceneManager.LoadScene("Mastery");
     }
 
@@ -152,6 +153,7 @@ public class Card : MonoBehaviour
         PlayerPrefs.SetInt("badP", badP);
 
         PlayerPrefs.Save();
+        this.audioManager.PlayButtonClick();
         SceneManager.LoadScene("Mastery");
     }
 
@@ -161,6 +163,7 @@ public class Card : MonoBehaviour
         PlayerPrefs.SetInt("goodP", goodP);
 
         PlayerPrefs.Save();
+        this.audioManager.PlayButtonClick();
         SceneManager.LoadScene("Mastery");
     }
 
@@ -172,6 +175,7 @@ public class Card : MonoBehaviour
         PlayerPrefs.SetInt("value", value);
 
         PlayerPrefs.Save();
+        this.audioManager.PlayButtonClick();
         SceneManager.LoadScene("Mastery");
     }
 
@@ -183,6 +187,7 @@ public class Card : MonoBehaviour
         PlayerPrefs.SetInt("badP", badP);
 
         PlayerPrefs.Save();
+        this.audioManager.PlayButtonClick();
         SceneManager.LoadScene("Mastery");
     }
 

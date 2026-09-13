@@ -3,6 +3,7 @@ using UnityEngine;
 public class GlovePodo : MonoBehaviour
 {
     GameObject director;
+    AudioManager audioManager;
     float span = 3.0f;       // 사라질떄까지 시간
     float delta = 0;         // 시간재기
     bool one = true;         // 한번만 카운트
@@ -10,6 +11,8 @@ public class GlovePodo : MonoBehaviour
     private void Awake()
     {
         this.director = GameObject.Find("MainDirector");
+        this.audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        this.span = this.director.GetComponent<MainGameDirector>().span;
     }
 
     private void Update()
@@ -39,6 +42,7 @@ public class GlovePodo : MonoBehaviour
 
                 this.director.GetComponent<MainGameDirector>().glovepodo = 1;
 
+                this.audioManager.podo();
                 Destroy(this.gameObject);
             }
         }
@@ -68,6 +72,7 @@ public class GlovePodo : MonoBehaviour
 
                 this.director.GetComponent<MainGameDirector>().glovepodo = 1;    // 아티팩트를 먹은걸 표시
 
+                this.audioManager.podo();
                 Destroy(this.gameObject);             // 없어진다
             }
         }
