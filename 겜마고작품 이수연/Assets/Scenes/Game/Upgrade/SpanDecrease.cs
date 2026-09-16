@@ -46,7 +46,7 @@ public class SpanDecrease : MonoBehaviour
 
                 this.uDirector.GetComponent<UpgradeDirector>().jucie -= 10;     // juice를 가져와 줄인다
 
-                this.uDirector.GetComponent<UpgradeDirector>().span -= this.uDirector.GetComponent<UpgradeDirector>().span * 1.1f;      // 획득속도 줄이기
+                this.uDirector.GetComponent<UpgradeDirector>().span -= 0.3f;      // 획득속도 줄이기
 
                 PlayerPrefs.SetInt("jucie", this.uDirector.GetComponent<UpgradeDirector>().jucie);
                 PlayerPrefs.SetFloat("span", this.uDirector.GetComponent<UpgradeDirector>().span);

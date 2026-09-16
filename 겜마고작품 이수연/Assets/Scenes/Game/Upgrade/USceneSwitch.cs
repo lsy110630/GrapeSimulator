@@ -73,6 +73,9 @@ public class USceneSwitch : MonoBehaviour
 
         PlayerPrefs.SetInt("EXUN", this.uDirector.GetComponent<UpgradeDirector>().EXUN);
 
+        PlayerPrefs.SetInt("sUN", this.uDirector.GetComponent<UpgradeDirector>().sUN);
+        PlayerPrefs.SetInt("spUN", this.uDirector.GetComponent<UpgradeDirector>().spUN);
+
         // ¾ÆÆ¼ÆÑÆ®
         PlayerPrefs.SetInt("shosepodo", this.uDirector.GetComponent<UpgradeDirector>().shosepodo);
         PlayerPrefs.SetInt("scissorspodo", this.uDirector.GetComponent<UpgradeDirector>().scissorspodo);
@@ -122,6 +125,7 @@ public class USceneSwitch : MonoBehaviour
         PlayerPrefs.SetInt("sUN", 0);
 
         PlayerPrefs.SetFloat("span", 3.0f);
+        PlayerPrefs.SetInt("spUN", 0);
 
         PlayerPrefs.SetFloat("badP", 0);
         PlayerPrefs.SetFloat("goodP", 0);

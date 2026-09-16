@@ -141,6 +141,9 @@ public class MainGameDirector : MonoBehaviour
         {
             level += 1;
             token += 1;
+            pSP += 1;
+            bP += 1;
+            span -= 0.3f;
 
             maxEX *= 2;
             EX = 0;
