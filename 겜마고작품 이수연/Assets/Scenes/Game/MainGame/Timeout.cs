@@ -33,6 +33,7 @@ public class Timeout : MonoBehaviour
     void Update()
     {
         this.clock.GetComponent<TextMeshProUGUI>().text = time.ToString("F1");
+        // 시간이 다 되면
         if (time <= 0)
         {
             // 데이터 저장
@@ -53,6 +54,7 @@ public class Timeout : MonoBehaviour
             diamondjucie += this.mDirector.GetComponent<MainGameDirector>().diamondpodo / 3; // 포도 / 3 만큼 추가
             PlayerPrefs.SetInt("diamondjucie", diamondjucie); // 저장
 
+            // 토큰 저장
             PlayerPrefs.SetInt("token", this.mDirector.GetComponent<MainGameDirector>().token);
 
             // 생성되는 포도 개수 저장
@@ -119,17 +121,21 @@ public class Timeout : MonoBehaviour
         float delta = 0;         // 시간재기
         float delta2 = 0;        // 시간재기2
         delta += Time.deltaTime;
+        // 주기가 돌면
         if (delta > span)
         {
             int dice1 = Random.Range(1, 101);
+            // 주사위가 총 이벤트 확률보다 작으면
             if (dice1 <= badP + goodP)
             {
                 int dice2 = Random.Range(1, badP + goodP + 1);
+                // 주사위가 안 좋은 이벤트에 걸리면
                 if (dice2 < badP)
                 {
                     this.bad.SetActive(true);
 
                     delta2 += Time.deltaTime;
+                    // 일정 시간동안 나왔다 지우기
                     if (delta2 > span2)
                     {
                         this.bad.SetActive(false);
@@ -143,6 +149,7 @@ public class Timeout : MonoBehaviour
                     this.good.SetActive(true);
 
                     delta2 += Time.deltaTime;
+                    // 일정 시간동안 나왔다 지우기
                     if (delta2 > span2)
                     {
                         this.good.SetActive(false);

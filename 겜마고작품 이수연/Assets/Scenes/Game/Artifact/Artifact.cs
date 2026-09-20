@@ -26,8 +26,7 @@ public class Artifact : MonoBehaviour
     public int glovepodo = 0;
     public int overallspodo = 0;
 
-    // bool 껐다 킬 변수를 만들어 아티팩트가 있는지 없는지 판단, 있으면 이미지를 나타내기
-
+    // 아티팩트가 있는지 없는지 판단, 있으면 플래그 바꾸기
     private void Awake()
     {
         this.hatpodo = PlayerPrefs.GetInt("hatpodo", 0);
@@ -61,6 +60,7 @@ public class Artifact : MonoBehaviour
         }
     }
 
+    // ?구체, 아티팩트 이미지 찾아놓고 플래그가 켜져있으면 구체 없애고 아티팩트 보이게 바꾸기
     void Start()
     {
         one = GameObject.Find("IDK");
@@ -112,11 +112,6 @@ public class Artifact : MonoBehaviour
             shoses.gameObject.SetActive(true);
             five.gameObject.SetActive(false);
         }
-
-    }
-
-    void Update()
-    {
 
     }
 }

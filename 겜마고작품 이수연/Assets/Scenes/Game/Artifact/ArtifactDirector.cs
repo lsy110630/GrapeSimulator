@@ -34,6 +34,7 @@ public class ArtifactDirector : MonoBehaviour
 
     }
 
+    // 아티팩트가 있으면 쓸 함수들
     public void glove()
     {
         if (glovepodo == 1)

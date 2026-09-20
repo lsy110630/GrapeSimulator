@@ -15,12 +15,6 @@ public class GrapePrefab : MonoBehaviour
         this.span = this.director.GetComponent<MainGameDirector>().span;
     }
 
-    private void Update()
-    {
-
-    }
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // 한번 서클과 닿았을떄 일정확률로 바로 부숴짐
@@ -28,12 +22,15 @@ public class GrapePrefab : MonoBehaviour
         {
             one = false;
             int dice = Random.Range(1, 1001);
+            // 주사위 값이 바로 부숴지는 변수 값보다 낮을때
             if (dice <= this.director.GetComponent<MainGameDirector>().bP)
             {
+                // 포도 얻고 경험치 증가
                 this.director.GetComponent<MainGameDirector>().podo += this.director.GetComponent<MainGameDirector>().value;
                 this.director.GetComponent<MainGameDirector>().EX += 1 + this.director.GetComponent<MainGameDirector>().addEX;
 
                 int dice2 = Random.Range(1, 1001);
+                // 주사위 값이 포도 생성 변수 값보다 낮을때
                 if (dice2 <= this.director.GetComponent<MainGameDirector>().pSP)
                 {
                     // 포도생성 함수실행
@@ -48,20 +45,22 @@ public class GrapePrefab : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        // 닿은 오브젝트가 원(범위)면
         if (collision.gameObject.tag == "Circle")
         {
             // 포도 애니메이션 작동
             this.GetComponent<Animator>().Play("GrapeAnimation");
 
             this.delta += Time.deltaTime;
+            // 시간이 지나면 
             if (this.delta > span)
             {
-                // podo랑 경험치에 +1
+                // 포도 얻고 경험치 증가
                 this.director.GetComponent<MainGameDirector>().podo += this.director.GetComponent<MainGameDirector>().value;
                 this.director.GetComponent<MainGameDirector>().EX += 1 + this.director.GetComponent<MainGameDirector>().addEX;
 
-                // 포도가 사라질떄마다 일정 확률로 포도가 생성되게 처음엔 아예 확률이 없지만 업그레이드를 하면 확룰이 조금씩생기는 그런
-                int dice = Random.Range(1, 1001);  //   원래 100에 1이 1% 1000 1 0.1% 10000 1 0.01% 100000 1 0.001%
+                int dice = Random.Range(1, 1001);
+                // 주사위 값이 포도 생성 변수 값보다 낮을때
                 if (dice <= this.director.GetComponent<MainGameDirector>().pSP)
                 {
                     // 포도생성 함수실행

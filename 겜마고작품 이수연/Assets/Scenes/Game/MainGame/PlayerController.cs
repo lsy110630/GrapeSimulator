@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     {
         this.mDirector = GameObject.Find("MainDirector");
 
-        this.speed = PlayerPrefs.GetFloat("speed", 0.03f);
+        this.speed = PlayerPrefs.GetFloat("speed", 0.03f);    // 스피드 받아오기
     }
 
     void Update()

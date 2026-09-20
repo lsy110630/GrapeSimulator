@@ -76,6 +76,7 @@ public class UpgradeDirector : MonoBehaviour
     {
         Application.targetFrameRate = 60;
 
+        // 텍스트 불러오기
         this.j = GameObject.Find("J");
         this.gj = GameObject.Find("GJ");
         this.dj = GameObject.Find("DJ");
@@ -120,19 +121,13 @@ public class UpgradeDirector : MonoBehaviour
         this.gpUN = PlayerPrefs.GetInt("gpUN", 0);
         this.diamondP = PlayerPrefs.GetInt("diamondP", 0);
         this.dpUN = PlayerPrefs.GetInt("dpUN", 0);
-
-
         this.artiP = PlayerPrefs.GetInt("artiP", 1);
-
         this.speed = PlayerPrefs.GetFloat("speed", 0.03f);
         this.sUN = PlayerPrefs.GetInt("sUN", 0);
-
         this.span = PlayerPrefs.GetFloat("span", 3.0f);
         this.spUN = PlayerPrefs.GetInt("spUN", 0);
-
         this.badP = PlayerPrefs.GetInt("badP", 0);
         this.goodP = PlayerPrefs.GetInt("goodP", 0);
-
         this.EndUN = PlayerPrefs.GetInt("EndUN", 0);
 
         // 아티팩트
@@ -145,6 +140,7 @@ public class UpgradeDirector : MonoBehaviour
 
     void Update()
     {
+        // 각 업그레이드의 현재 업그레이드 상태 테스트 밑 나머지 기반이 되는 텍스트 ex) 주스 개수
         this.j.GetComponent<TextMeshProUGUI>().text = jucie.ToString();
         this.gj.GetComponent<TextMeshProUGUI>().text = goldjucie.ToString();
         this.dj.GetComponent<TextMeshProUGUI>().text = diamondjucie.ToString();
@@ -158,16 +154,11 @@ public class UpgradeDirector : MonoBehaviour
         this.addGPnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().addGPUN.ToString() + " /" + " 1";
         this.addDPnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().addDPUN.ToString() + " /" + " 1";
         this.gpnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().gpUN.ToString() + " /" + " 5";
-
         this.GPpay.GetComponent<TextMeshProUGUI>().text = "골드포도주스 " + this.GetComponent<GPIncrease>().pay.ToString() + "개";
-        
         this.dpnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().dpUN.ToString() + " /" + " 5";
-
         this.DPpay.GetComponent<TextMeshProUGUI>().text = "다이아포도주스 " + this.GetComponent<DPIncrease>().pay.ToString() + "개";
-
         this.snUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().sUN.ToString() + " /" + " 5";
         this.spnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().spUN.ToString() + " /" + " 5";
-
         this.EndnUN.GetComponent<TextMeshProUGUI>().text = this.GetComponent<UpgradeDirector>().EndUN.ToString() + " /" + " 1";
     }
 }

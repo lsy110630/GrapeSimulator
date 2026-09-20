@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Card : MonoBehaviour
 {
-    public GameObject[] cards; // 전체 카드
+    public GameObject[] cards; // 전체 카드 담는 변수
     AudioManager audioManager;
 
     public int podo = 0;
@@ -46,20 +46,25 @@ public class Card : MonoBehaviour
     void Start()
     {
         // 전체 카드 비활성화
+        // foreach 카드 안에 있는걸 하나씩 꺼내서 반복
+        // var card 현재 카드 안에서 꺼낸 카드
         foreach (var card in cards)
         {
+            // 숨기기
             card.gameObject.SetActive(false);
         }
 
-
+        // cards.Length 배열의 총 개수 지금은 10인거 그러니까 0~9까지
         int card1 = Random.Range(0, cards.Length); // 첫번째 카드의 배열 번호
         cards[card1].GetComponent<RectTransform>().anchoredPosition = new Vector3(-600, 0, 0);
         cards[card1].SetActive(true);
 
         int card2 = Random.Range(0, cards.Length); //두번째 카드의 배열 번호
+        // 1과 2가 같으면 반복
         while (card1 == card2)
         {
             card2 = Random.Range(0, cards.Length);
+            // 다르니 탈출
             if (card1 != card2)
             {
                 break;
@@ -69,9 +74,11 @@ public class Card : MonoBehaviour
         cards[card2].SetActive(true);
 
         int card3 = Random.Range(0, cards.Length); // 세번째 카드의 배열 번호
+        // 1과 3, 2와 3이 같으니 반복
         while (card1 == card3 || card2 == card3)
         {
             card3 = Random.Range(0, cards.Length);
+            // 다르니 탈출
             if (card1 != card3 && card2 != card3)
             {
                 break;
@@ -81,6 +88,7 @@ public class Card : MonoBehaviour
         cards[card3].SetActive(true);
     }
 
+    // 카드 1~10 까지 고를떄 쓸 함수들
     public void Card1()
     {
         this.speed += speed * 1.1f;

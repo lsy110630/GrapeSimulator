@@ -37,7 +37,7 @@ public class GPIncrease : MonoBehaviour
 
                 this.uDirector.GetComponent<UpgradeDirector>().goldP += 1;             // 골드 포도 생성확률 가져와 늘린다
 
-                this.pay += 5;
+                this.pay += 5;       // 가격 증가
 
                 PlayerPrefs.SetInt("goldjucie", this.uDirector.GetComponent<UpgradeDirector>().goldjucie);
                 PlayerPrefs.SetInt("goldP", this.uDirector.GetComponent<UpgradeDirector>().goldP);

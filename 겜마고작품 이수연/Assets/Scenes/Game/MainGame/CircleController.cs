@@ -6,7 +6,7 @@ public class CircleController : MonoBehaviour
 
     void Start()
     {
-        this.player = GameObject.Find("Player");
+        this.player = GameObject.Find("Player");  // 플레이어 찾고
     }
 
     void Update()

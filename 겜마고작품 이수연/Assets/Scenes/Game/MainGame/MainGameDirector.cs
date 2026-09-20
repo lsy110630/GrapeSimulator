@@ -74,30 +74,35 @@ public class MainGameDirector : MonoBehaviour
         this.addEX = PlayerPrefs.GetInt("addEX", 0);
         this.token = PlayerPrefs.GetInt("token", 0);
 
+        // 아티팩트 값 가져오고 있으면 능력치 증가
         this.hatpodo = PlayerPrefs.GetInt("hatpodo", 0);
         if (hatpodo == 1)
         {
             speed *= 1.1f;
         }
 
+        // 아티팩트 값 가져오고 있으면 능력치 증가
         this.shosepodo = PlayerPrefs.GetInt("shosepodo", 0);
         if (shosepodo == 1)
         {
             speed *= 1.1f;
         }
 
+        // 아티팩트 값 가져오고 있으면 능력치 증가
         this.scissorspodo = PlayerPrefs.GetInt("scissorspodo", 0);
         if (scissorspodo == 1)
         {
             this.Circle.transform.localScale = new Vector3(1.98f, 1.98f, 1f);
         }
 
+        // 아티팩트 값 가져오고 있으면 능력치 증가
         this.glovepodo = PlayerPrefs.GetInt("glovepodo", 0);
         if (glovepodo == 1)
         {
             bP += 5;
         }
 
+        // 아티팩트 값 가져오고 있으면 능력치 증가
         this.overallspodo = PlayerPrefs.GetInt("overallspodo", 0);
         if (overallspodo == 1)
         {
@@ -137,16 +142,17 @@ public class MainGameDirector : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // 경험치가 다 차면
         if (EX >= maxEX)
         {
-            level += 1;
-            token += 1;
-            pSP += 1;
-            bP += 1;
-            span -= 0.3f;
+            level += 1;     //레벨업
+            token += 1;     // 토큰 추가
+            pSP += 1;       // 포도 스폰 확률 증가
+            bP += 1;        // 바로 부숴지는 확률 증가
+            span -= 0.3f;   // 포도 얻는 속도 감소
 
-            maxEX *= 2;
-            EX = 0;
+            maxEX *= 2;     // 최대 경험치 증가
+            EX = 0;         // 경험치 초기화
         }
     }
 
@@ -154,13 +160,14 @@ public class MainGameDirector : MonoBehaviour
     {
         this.bad.SetActive(true);
 
-        float speed = this.speed;
+        float speed = PlayerPrefs.GetFloat("speed", 0.03f);
         this.speed = 0.01f;         // 속도 감소
 
         float span = 2.0f;       // 속도 감소 시간
         float delta = 0;         // 시간재기
 
         delta += Time.deltaTime;
+        // 일정 시간동안 느려졌다 돌아오기
         if (delta > span)
         {
             this.speed = speed;
@@ -172,13 +179,14 @@ public class MainGameDirector : MonoBehaviour
     {
         this.good.SetActive(true);
 
-        float speed = this.speed;
-        this.speed = speed * 1.5f;         // 속도 증가
+        float speed = PlayerPrefs.GetFloat("speed", 0.03f);
+        this.speed *= 1.5f;                // 속도 증가
 
         float span = 2.0f;                 // 속도 증가 시간
         float delta = 0;                   // 시간재기
 
         delta += Time.deltaTime;
+        // 일정 시간동안 빨라졌다 돌아오기
         if (delta > span)
         {
             this.speed = speed;
