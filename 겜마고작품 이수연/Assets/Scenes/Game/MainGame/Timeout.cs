@@ -113,7 +113,7 @@ public class Timeout : MonoBehaviour
         }
         else
         {
-            time -= 0.01f;
+            time -= 0.0167f; // 프레임을 60으로 제한해놓은거에 시간 줄어드는걸 맞춤
         }
 
         float span = 3.0f;       // 이벤트 주기

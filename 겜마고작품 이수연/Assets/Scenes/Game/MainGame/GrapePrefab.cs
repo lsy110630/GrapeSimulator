@@ -20,7 +20,7 @@ public class GrapePrefab : MonoBehaviour
         // 한번 서클과 닿았을떄 일정확률로 바로 부숴짐
         if ((one == true) && (collision.gameObject.tag == "Circle"))
         {
-            one = false;
+            one = false; // 여러번 발생하면 안되기 때문에 한 번만 발생할 수 있게 False로 바꾼다
             int dice = Random.Range(1, 1001);
             // 주사위 값이 바로 부숴지는 변수 값보다 낮을때
             if (dice <= this.director.GetComponent<MainGameDirector>().bP)

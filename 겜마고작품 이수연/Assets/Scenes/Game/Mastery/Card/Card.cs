@@ -64,11 +64,6 @@ public class Card : MonoBehaviour
         while (card1 == card2)
         {
             card2 = Random.Range(0, cards.Length);
-            // 다르니 탈출
-            if (card1 != card2)
-            {
-                break;
-            }
         }
         cards[card2].GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
         cards[card2].SetActive(true);
@@ -78,18 +73,13 @@ public class Card : MonoBehaviour
         while (card1 == card3 || card2 == card3)
         {
             card3 = Random.Range(0, cards.Length);
-            // 다르니 탈출
-            if (card1 != card3 && card2 != card3)
-            {
-                break;
-            }
         }
         cards[card3].GetComponent<RectTransform>().anchoredPosition = new Vector3(600, 0, 0);
         cards[card3].SetActive(true);
     }
 
     // 카드 1~10 까지 고를떄 쓸 함수들
-    public void Card1()
+    public void Card1() // 스피드가 1.1배 증가한다
     {
         this.speed += speed * 1.1f;
         PlayerPrefs.SetFloat("speed", speed);
@@ -99,7 +89,7 @@ public class Card : MonoBehaviour
         SceneManager.LoadScene("Mastery");
     }
 
-    public void Card2()
+    public void Card2()  // 시작할때 포도의 개수가 1개 증가한다
     {
         this.podoCount += 1;
         PlayerPrefs.SetInt("podoCount", podoCount);
@@ -109,7 +99,7 @@ public class Card : MonoBehaviour
         SceneManager.LoadScene("Mastery");
     }
 
-    public void Card3()
+    public void Card3()  // 아티팩트가 나올 확률이 1% 증가한다
     {
         this.artiP += 1;
         PlayerPrefs.SetInt("artiP", artiP);
@@ -119,7 +109,7 @@ public class Card : MonoBehaviour
         SceneManager.LoadScene("Mastery");
     }
 
-    public void Card4()
+    public void Card4()  // 게임시간이 1초 증가한다
     {
         this.time += 1;
         PlayerPrefs.SetInt("time", time);
@@ -129,7 +119,7 @@ public class Card : MonoBehaviour
         SceneManager.LoadScene("Mastery");
     }
 
-    public void Card5()
+    public void Card5()  // 아티팩트가 나올 확률이 5% 증가하며 안 좋은 이벤트 발생 확률이 1% 증가한다 
     {
         this.artiP += 5;
         PlayerPrefs.SetInt("artiP", artiP);
@@ -141,7 +131,7 @@ public class Card : MonoBehaviour
         SceneManager.LoadScene("Mastery");
     }
 
-    public void Card6()
+    public void Card6()  // 스피드가 1.3배 증가하며 안 좋은 이벤트 발생 확률이 1% 증가한다 
     {
         this.speed += speed * 1.3f;
         PlayerPrefs.SetFloat("speed", speed);
@@ -153,7 +143,7 @@ public class Card : MonoBehaviour
         SceneManager.LoadScene("Mastery");
     }
 
-    public void Card7()
+    public void Card7()  // 시작할때 포도 개수가 5개 증가하며 안 좋은 이벤트 발생 확률이 1% 증가한다 
     {
         this.podoCount += 5;
         PlayerPrefs.SetInt("podoCount", podoCount);
@@ -165,7 +155,7 @@ public class Card : MonoBehaviour
         SceneManager.LoadScene("Mastery");
     }
 
-    public void Card8()
+    public void Card8()  // 좋은 이벤트 발생 확률이 1% 증가한다 
     {
         this.goodP += 1;
         PlayerPrefs.SetInt("goodP", goodP);
@@ -175,7 +165,7 @@ public class Card : MonoBehaviour
         SceneManager.LoadScene("Mastery");
     }
 
-    public void Card9()
+    public void Card9()  // 가치가 1 증가하며 좋은 이벤트 발생 확률이 1% 증가한다 
     {
         this.goodP += 1;
         PlayerPrefs.SetInt("goodP", goodP);
@@ -187,7 +177,7 @@ public class Card : MonoBehaviour
         SceneManager.LoadScene("Mastery");
     }
 
-    public void Card10()
+    public void Card10()  // 각 이벤트 발생 확률이 3% 씩 증가한다 
     {
         this.goodP += 3;
         PlayerPrefs.SetInt("goodP", goodP);

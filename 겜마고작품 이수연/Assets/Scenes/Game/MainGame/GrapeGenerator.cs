@@ -38,43 +38,34 @@ public class GrapeGenerator : MonoBehaviour
             {
                 dice = Random.Range(1, 6);
 
-                // 무한 반복
-                while (true)
+                // 주사위가 1이며 아티팩트에 글러브가 없으면 
+                if (dice == 1 && this.mDirector.GetComponent<MainGameDirector>().glovepodo == 0)
                 {
-                    // 주사위가 1이며 아티팩트에 글러브가 없으면 
-                    if (dice == 1 && this.mDirector.GetComponent<MainGameDirector>().glovepodo == 0)
-                    {
-                        item = Instantiate(glovepodo);
-                        break;
-                    }
+                    item = Instantiate(glovepodo);
+                }
 
-                    // 주사위가 2이며 아티팩트에 가위가 없으면 
-                    if (dice == 2 && this.mDirector.GetComponent<MainGameDirector>().scissorspodo == 0)
-                    {
-                        item = Instantiate(scissorspodo);
-                        break;
-                    }
+                // 주사위가 2이며 아티팩트에 가위가 없으면 
+                if (dice == 2 && this.mDirector.GetComponent<MainGameDirector>().scissorspodo == 0)
+                {
+                    item = Instantiate(scissorspodo);
+                }
 
-                    // 주사위가 3이며 아티팩트에 모자가 없으면 
-                    if (dice == 3 && this.mDirector.GetComponent<MainGameDirector>().hatpodo == 0)
-                    {
-                        item = Instantiate(hatpodo);
-                        break;
-                    }
+                // 주사위가 3이며 아티팩트에 모자가 없으면 
+                if (dice == 3 && this.mDirector.GetComponent<MainGameDirector>().hatpodo == 0)
+                {
+                    item = Instantiate(hatpodo);
+                }
 
-                    // 주사위가 4이며 아티팩트에 맬빵바지가 없으면 
-                    if (dice == 4 && this.mDirector.GetComponent<MainGameDirector>().overallspodo == 0)
-                    {
-                        item = Instantiate(overallspodo);
-                        break;
-                    }
+                // 주사위가 4이며 아티팩트에 맬빵바지가 없으면 
+                if (dice == 4 && this.mDirector.GetComponent<MainGameDirector>().overallspodo == 0)
+                {
+                    item = Instantiate(overallspodo);
+                }
 
-                    // 주사위가 5이며 아티팩트에 신발이 없으면 
-                    if (dice == 5 && this.mDirector.GetComponent<MainGameDirector>().shosepodo == 0)
-                    {
-                        item = Instantiate(shosepodo);
-                        break;
-                    }
+                // 주사위가 5이며 아티팩트에 신발이 없으면 
+                if (dice == 5 && this.mDirector.GetComponent<MainGameDirector>().shosepodo == 0)
+                {
+                    item = Instantiate(shosepodo);
                 }
 
                 one = false;
