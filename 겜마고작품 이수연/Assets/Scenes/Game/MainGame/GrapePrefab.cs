@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class GrapePrefab : MonoBehaviour
 {
     GameObject director;
@@ -68,8 +67,7 @@ public class GrapePrefab : MonoBehaviour
                 }
 
                 this.audioManager.podo();
-                // ณช ลอมü
-                Destroy(this.gameObject);
+                Destroy(this.gameObject); // ณช ลอมü
             }
         }
     }
