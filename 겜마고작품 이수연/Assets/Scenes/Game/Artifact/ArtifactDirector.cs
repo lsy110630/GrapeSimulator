@@ -1,11 +1,9 @@
-using NUnit.Framework;
-using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 
 public class ArtifactDirector : MonoBehaviour
 {
-    GameObject name;
+    GameObject nameObject;
     GameObject explanation;
 
     public int hatpodo = 0;         
@@ -25,7 +23,7 @@ public class ArtifactDirector : MonoBehaviour
 
     private void Start()
     {
-        this.name = GameObject.Find("name");
+        this.nameObject = GameObject.Find("name");
         this.explanation = GameObject.Find("explanation");
     }
 
@@ -39,13 +37,13 @@ public class ArtifactDirector : MonoBehaviour
     {
         if (glovepodo == 1)
         {
-            this.name.GetComponent<TextMeshProUGUI>().text = "장갑";
+            this.nameObject.GetComponent<TextMeshProUGUI>().text = "장갑";
             this.explanation.GetComponent<TextMeshProUGUI>().text = "손이 덜 아프다";
         }
 
         else
         {
-            this.name.GetComponent<TextMeshProUGUI>().text = "???";
+            this.nameObject.GetComponent<TextMeshProUGUI>().text = "???";
             this.explanation.GetComponent<TextMeshProUGUI>().text = "???";
         }
     }
@@ -54,13 +52,13 @@ public class ArtifactDirector : MonoBehaviour
     {
         if (scissorspodo == 1)
         {
-            this.name.GetComponent<TextMeshProUGUI>().text = "가위";
+            this.nameObject.GetComponent<TextMeshProUGUI>().text = "가위";
             this.explanation.GetComponent<TextMeshProUGUI>().text = "손으로 따는거 보다 좋다";
         }
 
         else
         {
-            this.name.GetComponent<TextMeshProUGUI>().text = "???";
+            this.nameObject.GetComponent<TextMeshProUGUI>().text = "???";
             this.explanation.GetComponent<TextMeshProUGUI>().text = "???";
         }
     }
@@ -69,13 +67,13 @@ public class ArtifactDirector : MonoBehaviour
     {
         if (hatpodo == 1)
         {
-            this.name.GetComponent<TextMeshProUGUI>().text = "모자";
+            this.nameObject.GetComponent<TextMeshProUGUI>().text = "모자";
             this.explanation.GetComponent<TextMeshProUGUI>().text = "태양이 덜 부담스럽다";
         }
 
         else
         {
-            this.name.GetComponent<TextMeshProUGUI>().text = "???";
+            this.nameObject.GetComponent<TextMeshProUGUI>().text = "???";
             this.explanation.GetComponent<TextMeshProUGUI>().text = "???";
         }
     }
@@ -84,13 +82,13 @@ public class ArtifactDirector : MonoBehaviour
     {
         if (overallspodo == 1)
         {
-            this.name.GetComponent<TextMeshProUGUI>().text = "맬빵바지";
+            this.nameObject.GetComponent<TextMeshProUGUI>().text = "맬빵바지";
             this.explanation.GetComponent<TextMeshProUGUI>().text = "있어 보인다";
         }
 
         else
         {
-            this.name.GetComponent<TextMeshProUGUI>().text = "???";
+            this.nameObject.GetComponent<TextMeshProUGUI>().text = "???";
             this.explanation.GetComponent<TextMeshProUGUI>().text = "???";
         }
     }
@@ -99,13 +97,13 @@ public class ArtifactDirector : MonoBehaviour
     {
         if (shosepodo == 1)
         {
-            this.name.GetComponent<TextMeshProUGUI>().text = "신발";
+            this.nameObject.GetComponent<TextMeshProUGUI>().text = "신발";
             this.explanation.GetComponent<TextMeshProUGUI>().text = "물집이 안 생긴다";
         }
 
         else
         {
-            this.name.GetComponent<TextMeshProUGUI>().text = "???";
+            this.nameObject.GetComponent<TextMeshProUGUI>().text = "???";
             this.explanation.GetComponent<TextMeshProUGUI>().text = "???";
         }
     }

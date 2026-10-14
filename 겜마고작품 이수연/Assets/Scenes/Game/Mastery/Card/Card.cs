@@ -10,7 +10,7 @@ public class Card : MonoBehaviour
     public int juice = 0;
     public int token = 0;           // 토큰 개수
     public int podoCount = 30;      // 포도개수
-    public int time = 15;           // 시간증가
+    public float time = 15f;        // 시간증가
     public int pSP = 0;             // 포도 스폰확률
     public int bP = 0;              // 부숴질 확률
     public int addEX = 0;           // 추가 경험치
@@ -29,7 +29,7 @@ public class Card : MonoBehaviour
         this.juice = PlayerPrefs.GetInt("juice", 0);
         this.token = PlayerPrefs.GetInt("token", 0);
         this.podoCount = PlayerPrefs.GetInt("podoCount", 30);
-        this.time = PlayerPrefs.GetInt("time", 15);
+        this.time = PlayerPrefs.GetFloat("time", 15f);
         this.pSP = PlayerPrefs.GetInt("pSP", 0);
         this.bP = PlayerPrefs.GetInt("bP", 0);
         this.addEX = PlayerPrefs.GetInt("addEX", 0);
@@ -111,7 +111,7 @@ public class Card : MonoBehaviour
     public void Card4()  // 게임시간이 1초 증가한다
     {
         this.time += 1;
-        PlayerPrefs.SetInt("time", time);
+        PlayerPrefs.SetFloat("time", time);
 
         PlayerPrefs.Save();
         this.audioManager.PlayButtonClick();

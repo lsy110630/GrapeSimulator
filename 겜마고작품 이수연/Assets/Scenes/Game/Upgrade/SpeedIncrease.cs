@@ -37,7 +37,7 @@ public class SpeedIncrease : MonoBehaviour
                 this.uDirector.GetComponent<UpgradeDirector>().speed *= 1.1f;         // 속도 가져와 늘린다
 
                 PlayerPrefs.SetInt("jucie", this.uDirector.GetComponent<UpgradeDirector>().jucie);
-                PlayerPrefs.SetInt("speed", this.uDirector.GetComponent<UpgradeDirector>().addEX);
+                PlayerPrefs.SetFloat("speed", this.uDirector.GetComponent<UpgradeDirector>().speed);
                 PlayerPrefs.SetInt("sUN", this.uDirector.GetComponent<UpgradeDirector>().sUN);
                 PlayerPrefs.Save();
             }

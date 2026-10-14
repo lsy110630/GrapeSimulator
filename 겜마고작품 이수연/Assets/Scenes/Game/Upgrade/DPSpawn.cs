@@ -40,7 +40,7 @@ public class DPSpawn : MonoBehaviour
             {
                 this.uDirector.GetComponent<UpgradeDirector>().addDPUN += 1;           // 업그레이드 넘버를 가져와 늘린다
 
-                this.uDirector.GetComponent<UpgradeDirector>().jucie -= 30;            // juice를 가져와 줄인다
+                this.uDirector.GetComponent<UpgradeDirector>().jucie -= 35;            // juice를 가져와 줄인다
 
                 this.uDirector.GetComponent<UpgradeDirector>().diamondP += 5;          // 다이아 포도 생성확률을 가져와 늘린다
 

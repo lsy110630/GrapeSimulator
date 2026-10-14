@@ -130,8 +130,8 @@ public class USceneSwitch : MonoBehaviour
         PlayerPrefs.SetFloat("span", 3.0f);
         PlayerPrefs.SetInt("spUN", 0);
 
-        PlayerPrefs.SetFloat("badP", 0);
-        PlayerPrefs.SetFloat("goodP", 0);
+        PlayerPrefs.SetInt("badP", 0);
+        PlayerPrefs.SetInt("goodP", 0);
 
         PlayerPrefs.SetInt("artiP", 1);
 

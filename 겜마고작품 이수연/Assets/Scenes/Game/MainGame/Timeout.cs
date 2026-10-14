@@ -8,9 +8,22 @@ public class Timeout : MonoBehaviour
     public float time = 15f;
     public int badP = 0;                // 안 좋은 이벤트 확률
     public int goodP = 0;               // 좋은 이벤트 확률
+    GameObject player;
     GameObject mDirector;
     GameObject bad;
     GameObject good;
+
+    float span = 3.0f;          // 이벤트 주기
+    float span2 = 1.0f;         // 이벤트가 알림화면 시간
+    float span3 = 2.0f;         // 플레이어속도용
+    float delta = 0;            // 시간재기  - 이벤트 발생요
+    float delta2 = 0;           // 시간재기2 - 이벤트 표시용
+    float delta3 = 0;           // 시간재기3 - 플레이어 속도용
+    bool goodEvent = false;     // 이벤트 발생했냐 안했냐
+    bool badEvent = false;      // 이벤트 발생했냐 안했냐
+    bool playerBad = false;
+    bool playerGood = false;
+    float originalSpeed = 0f;
 
     private void Awake()
     {
@@ -21,9 +34,8 @@ public class Timeout : MonoBehaviour
     void Start()
     {
         this.clock = GameObject.Find("Time");
+        this.player = GameObject.Find("Player");
         this.mDirector = GameObject.Find("MainDirector");
-        this.bad.SetActive(false);
-        this.good.SetActive(false);
         this.time = PlayerPrefs.GetFloat("time", 15f);
         this.badP = PlayerPrefs.GetInt("badP", 0);
         this.goodP = PlayerPrefs.GetInt("goodP", 0);
@@ -56,41 +68,6 @@ public class Timeout : MonoBehaviour
             // 토큰 저장
             PlayerPrefs.SetInt("token", this.mDirector.GetComponent<MainGameDirector>().token);
 
-            // 생성되는 포도 개수 저장
-            PlayerPrefs.SetInt("podoCount", this.mDirector.GetComponent<MainGameDirector>().podoCount);
-
-            // 포도 가치
-            PlayerPrefs.SetInt("value", this.mDirector.GetComponent<MainGameDirector>().value);
-
-            // 골드, 다이아 포도 생성 확률
-            PlayerPrefs.SetInt("goldP", this.mDirector.GetComponent<MainGameDirector>().goldP);
-            PlayerPrefs.SetInt("diamondP", this.mDirector.GetComponent<MainGameDirector>().diamondP);
-
-            // 겜 시간
-            float time = PlayerPrefs.GetFloat("time", 15);
-            PlayerPrefs.SetFloat("time", time);
-
-            // 캐릭터 속도
-            PlayerPrefs.SetFloat("speed", this.mDirector.GetComponent<MainGameDirector>().speed);
-
-            // 포도 획득 속도
-            PlayerPrefs.SetFloat("span", this.mDirector.GetComponent<MainGameDirector>().span);
-
-            // 안 좋은 이벤트 발생확률
-            PlayerPrefs.SetInt("badP", this.mDirector.GetComponent<MainGameDirector>().badP);
-
-            // 좋은 이벤트 발생확률
-            PlayerPrefs.SetInt("goodP", this.mDirector.GetComponent<MainGameDirector>().goodP);
-
-            // 포도를 먹었을때 포도가 새로 생성될 확률
-            PlayerPrefs.SetInt("pSP", this.mDirector.GetComponent<MainGameDirector>().pSP);
-
-            // 포도가 바로 먹어질 확률
-            PlayerPrefs.SetInt("bP", this.mDirector.GetComponent<MainGameDirector>().bP);
-
-            // 아티팩트 포도가 생성될 확률
-            PlayerPrefs.SetInt("artiP", this.mDirector.GetComponent<MainGameDirector>().artiP);
-
             // 아티팩트가 있는지 없는지 판단할 변수
             PlayerPrefs.SetInt("shosepodo", this.mDirector.GetComponent<MainGameDirector>().shosepodo);
             PlayerPrefs.SetInt("scissorspodo", this.mDirector.GetComponent<MainGameDirector>().scissorspodo);
@@ -115,51 +92,84 @@ public class Timeout : MonoBehaviour
             time -= 0.0167f; // 프레임을 60으로 제한해놓은거에 시간 줄어드는걸 맞춤
         }
 
-        float span = 3.0f;       // 이벤트 주기
-        float span2 = 1.0f;      // 이벤트가 알림화면 시간
-        float delta = 0;         // 시간재기
-        float delta2 = 0;        // 시간재기2
         delta += Time.deltaTime;
         // 주기가 돌면
         if (delta > span)
         {
-            int dice1 = Random.Range(1, 101);
+            int dice1 = Random.Range(1, 51);
             // 주사위가 총 이벤트 확률보다 작으면
             if (dice1 <= badP + goodP)
             {
                 int dice2 = Random.Range(1, badP + goodP + 1);
+
                 // 주사위가 안 좋은 이벤트에 걸리면
-                if (dice2 < badP)
+                if (dice2 <= badP)
                 {
                     this.bad.SetActive(true);
+                    this.badEvent = true; // 이벤트 발생
+                    this.playerBad = true;
 
-                    delta2 += Time.deltaTime;
-                    // 일정 시간동안 나왔다 지우기
-                    if (delta2 > span2)
-                    {
-                        this.bad.SetActive(false);
-                        delta2 = 0;
-                    }
-
-                    this.mDirector.GetComponent<MainGameDirector>().badEvent();
+                    originalSpeed = this.player.GetComponent<PlayerController>().speed;
+                    this.player.GetComponent<PlayerController>().speed = 0.01f;
                 }
                 else // good
                 {
                     this.good.SetActive(true);
+                    this.goodEvent = true; // 이벤트 발생
+                    this.playerGood = true;
 
-                    delta2 += Time.deltaTime;
-                    // 일정 시간동안 나왔다 지우기
-                    if (delta2 > span2)
-                    {
-                        this.good.SetActive(false);
-                        delta2 = 0;
-                    }
-
-                    this.mDirector.GetComponent<MainGameDirector>().goodEvent();
-                } 
+                    originalSpeed = this.player.GetComponent<PlayerController>().speed;
+                    this.player.GetComponent<PlayerController>().speed *= 1.5f;
+                }
             }
-            
+
             delta = 0;
+        }
+
+        // 이벤트 뜨면 이벤트용 시간계산
+        if (this.badEvent)
+        {
+            delta2 += Time.deltaTime;
+            // 일정 시간동안 나왔다 지우기
+            if (delta2 > span2)
+            {
+                this.bad.SetActive(false);
+                delta2 = 0;
+                this.badEvent = false;
+            }
+        }
+        if (this.goodEvent)
+        {
+            delta2 += Time.deltaTime;
+            // 일정 시간동안 나왔다 지우기
+            if (delta2 > span2)
+            {
+                this.good.SetActive(false);
+                delta2 = 0;
+                this.goodEvent = false;
+            }
+        }
+
+        // 플레이어 속도변환용
+        if (this.playerBad)
+        {
+            delta3 += Time.deltaTime;
+            if (delta3 > span3)
+            {
+                delta3 = 0;
+                this.playerBad = false;
+                this.player.GetComponent<PlayerController>().speed = this.originalSpeed;
+            }
+        }
+        if (this.playerGood)
+        {
+            delta3 += Time.deltaTime;
+            if (delta3 > span3)
+            {
+                delta3 = 0;
+                this.playerGood = false;
+                this.player.GetComponent<PlayerController>().speed = this.originalSpeed;
+            }
         }
     }
 }

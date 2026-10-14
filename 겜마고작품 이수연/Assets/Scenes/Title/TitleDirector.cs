@@ -23,12 +23,7 @@ public class TitleDirector : MonoBehaviour
     // 타이틀에서 나가기 누르면 쓸 함수
     public void Quit()
     {
-        // 유니티에서 실행하면 종료
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
         // 에플리케이션이면 끄기
-#else
         Application.Quit();
-#endif
     }
 }

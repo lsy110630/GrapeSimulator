@@ -47,11 +47,9 @@ public class MainGameDirector : MonoBehaviour
     private void Awake()
     {
         this.Circle = GameObject.Find("Circle");
-        // 이벤트 숨겨두기
+        
         this.bad = GameObject.Find("bad");
-        this.bad.SetActive(false);
         this.good = GameObject.Find("good");
-        this.good.SetActive(false);
 
         this.podoCount = PlayerPrefs.GetInt("podoCount", 30);
         this.value = PlayerPrefs.GetInt("value", 1);
@@ -120,6 +118,10 @@ public class MainGameDirector : MonoBehaviour
         this.levelT = GameObject.Find("levelT");
         this.EXT = GameObject.Find("EXT");
         this.maxEXT = GameObject.Find("maxEXT");
+
+        // 이벤트 숨겨두기
+        this.bad.SetActive(false);
+        this.good.SetActive(false);
     }
 
     void Update()
@@ -148,47 +150,13 @@ public class MainGameDirector : MonoBehaviour
             pSP += 1;       // 포도 스폰 확률 증가
             bP += 1;        // 바로 부숴지는 확률 증가
             span -= 0.3f;   // 포도 얻는 속도 감소
+            if (span < 0) 
+            {
+                span = 0;
+            }
 
             maxEX *= 2;     // 최대 경험치 증가
             EX = 0;         // 경험치 초기화
-        }
-    }
-
-    public void badEvent()
-    {
-        this.bad.SetActive(true);
-
-        float speed = PlayerPrefs.GetFloat("speed", 0.03f);
-        this.speed = 0.01f;         // 속도 감소
-
-        float span = 2.0f;       // 속도 감소 시간
-        float delta = 0;         // 시간재기
-
-        delta += Time.deltaTime;
-        // 일정 시간동안 느려졌다 돌아오기
-        if (delta > span)
-        {
-            this.speed = speed;
-            delta = 0;
-        }
-    }
-
-    public void goodEvent()
-    {
-        this.good.SetActive(true);
-
-        float speed = PlayerPrefs.GetFloat("speed", 0.03f);
-        this.speed *= 1.5f;                // 속도 증가
-
-        float span = 2.0f;                 // 속도 증가 시간
-        float delta = 0;                   // 시간재기
-
-        delta += Time.deltaTime;
-        // 일정 시간동안 빨라졌다 돌아오기
-        if (delta > span)
-        {
-            this.speed = speed;
-            delta = 0;
         }
     }
 }

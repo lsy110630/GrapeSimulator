@@ -43,13 +43,11 @@ public class End : MonoBehaviour
         {
             if (maxIncrease == false)
             {
-                this.uDirector.GetComponent<UpgradeDirector>().spUN += 1;        // 업그레이드 넘버를 가져와 늘린다
-
                 this.uDirector.GetComponent<UpgradeDirector>().jucie -= 300;     // juice를 가져와 줄인다
                 this.uDirector.GetComponent<UpgradeDirector>().goldjucie -= 125;     // goldjuice를 가져와 줄인다
                 this.uDirector.GetComponent<UpgradeDirector>().diamondjucie -= 100;     // diamondjuice를 가져와 줄인다
 
-                this.uDirector.GetComponent<UpgradeDirector>().EndUN += 1;
+                this.uDirector.GetComponent<UpgradeDirector>().EndUN += 1; // 업그레이드 넘버를 가져와 늘린다
 
                 PlayerPrefs.SetInt("jucie", this.uDirector.GetComponent<UpgradeDirector>().jucie);
                 PlayerPrefs.SetInt("goldjucie", this.uDirector.GetComponent<UpgradeDirector>().goldjucie);
