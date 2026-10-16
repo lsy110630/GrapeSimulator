@@ -80,7 +80,7 @@ public class Card : MonoBehaviour
     // 카드 1~10 까지 고를떄 쓸 함수들
     public void Card1() // 스피드가 1.1배 증가한다
     {
-        this.speed += speed * 1.1f;
+        this.speed *= 1.1f;
         PlayerPrefs.SetFloat("speed", speed);
 
         PlayerPrefs.Save();
@@ -100,7 +100,7 @@ public class Card : MonoBehaviour
 
     public void Card3()  // 아티팩트가 나올 확률이 1% 증가한다
     {
-        this.artiP += 1;
+        this.artiP += 10;
         PlayerPrefs.SetInt("artiP", artiP);
 
         PlayerPrefs.Save();
@@ -120,7 +120,7 @@ public class Card : MonoBehaviour
 
     public void Card5()  // 아티팩트가 나올 확률이 5% 증가하며 안 좋은 이벤트 발생 확률이 1% 증가한다 
     {
-        this.artiP += 5;
+        this.artiP += 50;
         PlayerPrefs.SetInt("artiP", artiP);
         this.badP += 1;
         PlayerPrefs.SetInt("badP", badP);
@@ -132,7 +132,7 @@ public class Card : MonoBehaviour
 
     public void Card6()  // 스피드가 1.3배 증가하며 안 좋은 이벤트 발생 확률이 1% 증가한다 
     {
-        this.speed += speed * 1.3f;
+        this.speed *= 1.3f;
         PlayerPrefs.SetFloat("speed", speed);
         this.badP += 1;
         PlayerPrefs.SetInt("badP", badP);

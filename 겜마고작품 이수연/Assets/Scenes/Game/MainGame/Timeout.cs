@@ -80,6 +80,9 @@ public class Timeout : MonoBehaviour
             PlayerPrefs.SetInt("EX", this.mDirector.GetComponent<MainGameDirector>().EX);
             PlayerPrefs.SetInt("maxEX", this.mDirector.GetComponent<MainGameDirector>().maxEX);
 
+            PlayerPrefs.SetInt("pSP", this.mDirector.GetComponent<MainGameDirector>().pSP);                       // 포도를 먹었을때 포도가 생성될 확률
+            PlayerPrefs.SetInt("bP", this.mDirector.GetComponent<MainGameDirector>().bP);                         // 포도가 바로 먹어질 확률
+            PlayerPrefs.SetFloat("span", this.mDirector.GetComponent<MainGameDirector>().span);                   // 포도 획득 속도
             // 포도를 먹었을때 추가로 얻을 경험치 변수
             PlayerPrefs.SetInt("addEX", this.mDirector.GetComponent<MainGameDirector>().addEX);
 
@@ -96,7 +99,7 @@ public class Timeout : MonoBehaviour
         // 주기가 돌면
         if (delta > span)
         {
-            int dice1 = Random.Range(1, 51);
+            int dice1 = Random.Range(1, 101);
             // 주사위가 총 이벤트 확률보다 작으면
             if (dice1 <= badP + goodP)
             {

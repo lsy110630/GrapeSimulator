@@ -14,6 +14,8 @@ public class MainGameDirector : MonoBehaviour
     GameObject bad;                     // 안 좋은 이벤트
     GameObject good;                    // 좋은 이벤트
 
+    GameObject player;
+
     public int podo = 0;                // 그냥 포도
     public int goldpodo = 0;            // 골드 포도
     public int diamondpodo = 0;         // 다이아 포도
@@ -70,6 +72,8 @@ public class MainGameDirector : MonoBehaviour
         this.addEX = PlayerPrefs.GetInt("addEX", 0);
         this.token = PlayerPrefs.GetInt("token", 0);
 
+        this.player = GameObject.Find("Player");
+
         // 아티팩트 값 가져오고 있으면 능력치 증가
         this.hatpodo = PlayerPrefs.GetInt("hatpodo", 0);
         if (hatpodo == 1)
@@ -104,6 +108,8 @@ public class MainGameDirector : MonoBehaviour
         {
             speed *= 1.1f;
         }
+
+        this.player.GetComponent<PlayerController>().speed = speed; // 속도를 플레이어에 넣기
     }
 
 

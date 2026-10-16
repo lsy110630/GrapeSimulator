@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         this.mDirector = GameObject.Find("MainDirector");
-
-        this.speed = PlayerPrefs.GetFloat("speed", 0.03f);    // 스피드 받아오기
     }
 
     void Update()

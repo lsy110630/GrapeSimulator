@@ -29,6 +29,7 @@ public class GrapeGenerator : MonoBehaviour
         // 포도를 30개 소환한다
         for (int i = 0; i < number; i++)
         {
+            bool flag = false;
             int dice = Random.Range(1, 1001);
             int gold = Random.Range(1, 101);
             int diamond = Random.Range(1, 101);
@@ -42,30 +43,35 @@ public class GrapeGenerator : MonoBehaviour
                 if (dice == 1 && this.mDirector.GetComponent<MainGameDirector>().glovepodo == 0)
                 {
                     item = Instantiate(glovepodo);
+                    flag = true;
                 }
 
                 // 주사위가 2이며 아티팩트에 가위가 없으면 
                 if (dice == 2 && this.mDirector.GetComponent<MainGameDirector>().scissorspodo == 0)
                 {
                     item = Instantiate(scissorspodo);
+                    flag = true;
                 }
 
                 // 주사위가 3이며 아티팩트에 모자가 없으면 
                 if (dice == 3 && this.mDirector.GetComponent<MainGameDirector>().hatpodo == 0)
                 {
                     item = Instantiate(hatpodo);
+                    flag = true;
                 }
 
                 // 주사위가 4이며 아티팩트에 맬빵바지가 없으면 
                 if (dice == 4 && this.mDirector.GetComponent<MainGameDirector>().overallspodo == 0)
                 {
                     item = Instantiate(overallspodo);
+                    flag = true;
                 }
 
                 // 주사위가 5이며 아티팩트에 신발이 없으면 
                 if (dice == 5 && this.mDirector.GetComponent<MainGameDirector>().shosepodo == 0)
                 {
                     item = Instantiate(shosepodo);
+                    flag = true;
                 }
 
                 one = false;
@@ -75,16 +81,18 @@ public class GrapeGenerator : MonoBehaviour
             else if (gold <= this.mDirector.GetComponent<MainGameDirector>().goldP)
             {
                 item = Instantiate(goldgrape);
+                flag = true;
             }
 
             // 다이아 주사위가 확률 값보다 낮으면 다이아 포도 소환
             else if (diamond <= this.mDirector.GetComponent<MainGameDirector>().diamondP)
             {
                 item = Instantiate(diamondgrape);
+                flag = true;
             }
 
-            // 그냥 포도
-            else
+            // 아무것도 생성 안 했다면 그냥 포도를 생성
+            if(flag == false)
             {
                 item = Instantiate(grape);
             }
